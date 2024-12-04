@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>a n t o n | p.</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="./favicon.ico">
+	<script src="./scripts/minorScripts.js"></script>
+	<script defer src="scripts/selectAboutSection.js"></script>
+	<script defer src="./scripts/toggleAboutStates.js"></script>
+</head>
+<body>
+<div class="side-text-base side-text-left" id="side-text-left"></div>
+<div class="main-container">
+	<img src="./assets/interface/backgrounds/headerBanner.png"
+	     alt="An abstract, blue-colored decorative header banner image."/>
+	<img src="./assets/interface/self/logotype.png" style="margin-top: 2.5em; margin-bottom: 2.25em; width: 75%"
+	     alt="A logotype containing my mirrored last name, four colored dots and my first name."/>
+	<!-- Navigation START-->
+	<div class="navbar-outer-container">
+		<div class="navbar-inner-container" id="navigation">
+			<button class="navbar-button" onclick="navigateTo('#about')" style="margin-left: 0.5rem">
+				<div class="navbar-button-gradient"></div>
+				<div class="navbar-button-text">About</div>
+			</button>
+			<button class="navbar-button" onclick="navigateTo('#projects')">
+				<div class="navbar-button-gradient"></div>
+				<div class="navbar-button-text">Projects</div>
+			</button>
+			<button class="navbar-button" style="flex-grow: 1.3" onclick="navigateTo('#photography')">
+				<div class="navbar-button-gradient"></div>
+				<div class="navbar-button-text">Photography</div>
+			</button>
+			<button class="navbar-button" onclick="navigateTo('/resume')">
+				<div class="navbar-button-gradient"></div>
+				<div class="navbar-button-text">Resume</div>
+			</button>
+			<button class="navbar-button" style="margin-right: 0.5rem"
+			        onclick="window.open('https://github.com/Anton-Pan')">
+				<div class="navbar-button-gradient"></div>
+				<div class="navbar-button-text">Github</div>
+			</button>
+		</div>
+	</div>
+	<!-- Navigation END-->
+	<img src="./assets/interface/backgrounds/cityscape.png" style="margin-bottom: 0.5rem;" alt="A blue cityscape."/>
+	<!-- About START-->
+	<div class="section-header" id="about">about</div>
+	<div class="about-container" style="margin-bottom: 0.5rem">
+		<div class="about-photo-container">
+			<img src="./assets/interface/self/headshot.jpeg" alt="A headshot of myself."/>
+		</div>
+		<div class="about-content-container">
+			<div class="about-navigation">
+				<button class="about-navigation-button-selected" id="about-me-button"
+				        onclick="selectAboutSection('about-me-button')">
+					About Me
+				</button>
+				<button class="about-navigation-button-unselected" id="about-site-button"
+				        onclick="selectAboutSection('about-site-button')">
+					About The Site
+				</button>
+			</div>
+			<div class="about-text" id="about-text-container">placeholder</div>
+		</div>
+	</div>
+	<!-- About END-->
+
+	<!-- Projects START -->
+	<div class="section-header" id="projects">projects</div>
+	<div class="projects-container" style="margin-bottom: 0.5rem">
+		<!-- Project 1-->
+		<div class="projects-item-outside-container">
+			<div class="projects-item-middle-container">
+				<div class="projects-item-header">
+					Project 1 Header Text
+				</div>
+				<div class="projects-item-inside-container">
+					<img src="./assets/projects/hiko.jpg" class="projects-item-picture" alt=""/>
+					<div class="projects-item-text">
+						Project 1 Body Text
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Project 2-->
+		<div class="projects-item-outside-container">
+			<div class="projects-item-middle-container">
+				<div class="projects-item-header">
+					Project 2 Header Text
+				</div>
+				<div class="projects-item-inside-container">
+					<img src="./assets/projects/somalia.jpg" class="projects-item-picture"/>
+					<div class="projects-item-text">
+						Project 2 Body Text
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Projects END -->
+
+	<!-- Photography START -->
+	<div class="section-header" id="photography">photography</div>
+	<div class="photography-grid-container" style="margin-bottom: 0.5rem">
+		<div class="photography-grid">
+			<img class="photography-grid-image" src="./assets/photography/image1.jpg"/>
+			<img class="photography-grid-image" src="./assets/photography/image2.jpg"/>
+		</div>
+		<div class="photography-grid">
+			<img class="photography-grid-image" src="./assets/photography/image3.jpg"/>
+			<img class="photography-grid-image" src="./assets/photography/image4.jpg"/>
+		</div>
+	</div>
+	<!-- Photography END -->
+	<div class="footer">
+		<img src="./assets/interface/backgrounds/footerBanner.png" class="footer-image"
+		     alt="An abstract, blue-colored decorative footer banner image."/>
+		<div class="footer-content">
+			<div>(c) anton p. 2024</div>
+			<div>
+				<a href="https://github.com/anton-pan">github</a> |
+				<a href="anton_panfilenok@sfu.ca">email</a> |
+				<a
+					href="https://www.linkedin.com/in/anton-panf/"
+					style="text-decoration: line-through; pointer-events: none; cursor: not-allowed;">
+					linkedin</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="side-text-base side-text-right" id="side-text-right"></div>
+</body>
+</html>
