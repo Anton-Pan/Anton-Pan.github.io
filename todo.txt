@@ -1,0 +1,17 @@
+- create json to store image data (color, collection, format, alt text)
+- implement pagination for photography grid (shift half rows)
+- create js program for photo grid
+- start calling photo grid "photo gallery"
+- improve about me text
+- write about site text
+- upload updated resume
+- list ticketrebel as project (use screenshot form example page)
+- create interactive ticketrebel demo (ask boss for permission first)
+- - don't use server, just create a couple pages that update locally based on input
+- - allow user to input a concert, then show them the page for it
+- - figure out how to store the data locally between pages
+
+**MAYBE**
+- create react resume generator as project?
+- create to-do page on site?
+
