@@ -4,17 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>a n t o n | p.</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/snow.css">
 	<link rel="icon" href="./favicon.ico">
+	<script src="./scripts/snow.js"></script>
 	<script src="./scripts/minorScripts.js"></script>
+	<script defer src="./scripts/generateSideText.js"></script>
 	<script defer src="./scripts/selectAboutSection.js"></script>
-	<script defer src="./scripts/toggleAboutStates.js"></script>
 </head>
 <body>
-<div class="snow-container" style="left: 0">
-	<div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div>
-</div>
-<div class="side-text-base side-text-left" id="side-text-left"></div>
+<div class="snow-container-full" id="snow-container-full"></div>
+<div class="side-text-left" id="side-text-left"></div>
 <div class="main-container">
 	<img src="./assets/interface/backgrounds/headerBanner.png"
 	     alt="An abstract, blue-colored decorative header banner image."/>
@@ -106,28 +106,65 @@
 
 	<!-- Photography START -->
 	<div class="section-header" id="photography">photography</div>
-	<div class="photography-seek-container">
-		<img class="phoography-grid-seek-button" src="./assets/interface/buttons/arrow.png" style="rotate: 180deg"/>
-		<img class="phoography-grid-seek-button" src="./assets/interface/buttons/arrow.png"/>
+	<div class="photography-container" style="margin-bottom: 0.5rem">
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/aurora-1.jpeg"/>
+			<img src="./assets/photography/horizontal/cat-1.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/film-on-rainy-window.jpeg"/>
+			<img src="./assets/photography/vertical/autumn-house.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/balconies-1.jpeg"/>
+			<img src="./assets/photography/horizontal/foggy-streetlights.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/fogy-streetlight-1.jpeg"/>
+			<img src="./assets/photography/vertical/balconies-3.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/banconies-2.jpeg"/>
+			<img src="./assets/photography/horizontal/horse.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/leaves-2.jpeg"/>
+			<img src="./assets/photography/vertical/cat-in-tree.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/diner.jpeg"/>
+			<img src="./assets/photography/horizontal/snowy-bridge-at-night.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/snowy-field.jpeg"/>
+			<img src="./assets/photography/vertical/granville.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/leaves-1.jpeg"/>
+			<img src="./assets/photography/horizontal/snowy-night-alley.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/snowy-overpass-1.jpeg"/>
+			<img src="./assets/photography/vertical/neon-sign.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/palm-trees.jpeg"/>
+			<img src="./assets/photography/horizontal/spiderweb-on-dead-plant.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/sunset-and-balconies.jpeg"/>
+			<img src="./assets/photography/vertical/pool-and-balconies.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/vertical/regis-hotel.jpeg"/>
+			<img src="./assets/photography/horizontal/tail-light-trails-horizontal.jpeg"/>
+		</div>
+		<div class="photography-column">
+			<img src="./assets/photography/horizontal/trainyard.jpeg"/>
+			<img src="./assets/photography/vertical/seagulls.jpeg"/>
+		</div>
 	</div>
-	<div class="photography-grid-container" style="margin-bottom: 0.5rem">
-		<div class="photography-grid">
-			<img class="photography-grid-image" src="./assets/photography/large/horizontal-1.jpeg"/>
-			<img class="photography-grid-image" src="./assets/photography/large/vertical-1.jpeg"/>
-		</div>
-		<div class="photography-grid">
-			<img class="photography-grid-image" src="./assets/photography/large/vertical-2.jpeg"/>
-			<img class="photography-grid-image" src="./assets/photography/large/horizontal-2.jpeg"/>
-		</div>
-		<div class="photography-grid">
-			<img class="photography-grid-image" src="./assets/photography/large/horizontal-3.jpeg"/>
-			<img class="photography-grid-image" src="./assets/photography/large/vertical-3.jpeg"/>
-		</div>
-		<div class="photography-grid">
-			<img class="photography-grid-image" src="./assets/photography/large/vertical-4.jpeg"/>
-			<img class="photography-grid-image" src="./assets/photography/large/horizontal-4.jpeg"/>
-		</div>
-	</div>
+
 	<!-- Photography END -->
 	<div class="footer">
 		<img src="./assets/interface/backgrounds/footerBanner.png" class="footer-image"
@@ -145,15 +182,6 @@
 		</div>
 	</div>
 </div>
-<div class="snow-container" style="right: 0">
-	<div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div>
-</div>
-<div class="side-text-base side-text-right" id="side-text-right"></div>
+<div class="snow-container-right" id="snow-container-right"></div>
 </body>
 </html>
-
-<!--
-	<div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div><div class="snowflake"></div>
-	<div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div><div class="snowflake-left"></div>
-	<div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div><div class="snowflake-right"></div>
--->
