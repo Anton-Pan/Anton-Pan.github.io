@@ -1,14 +1,16 @@
-const unselected = "about-navigation-button-unselected"
-const selected = "about-navigation-button-selected"
+const unselectedClass = "about-navigation-button-unselected"
+const selectedClass = "about-navigation-button-selected"
 const aboutMeID = "about-me-button"
 const aboutSiteID = "about-site-button"
 const textContainerID = "about-text-container"
+
 const yearsSinceHighSchool = () => {
     // Too lazy to update it by hand every year :P
     const yearWords = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
     const n = new Date().getFullYear() - 2021;
     return (yearWords[n]);
 }
+
 const aboutMeText = `Hi! I'm Anton - the developer of this site! <br>
 I'm a third-year at Simon Fraser University, in Vancouver, B.C., studying Computing Science. <br>
 I've been working as a full-stack web developer for the past ${yearsSinceHighSchool()} years, since before I even finished high school. <br>
@@ -21,23 +23,26 @@ const selectAboutSection = (targetId) => {
     const aboutMeButton = document.getElementById(aboutMeID);
     const aboutSiteButton = document.getElementById(aboutSiteID);
     const aboutTextContainer = document.getElementById(textContainerID);
-
-    if (!aboutMeButton || !aboutSiteButton || !aboutTextContainer) {
-        return;
+    const buttonArray = [aboutMeButton, aboutSiteButton, aboutTextContainer]
+    for (const button of buttonArray) {
+        if (!button) {
+            console.error(`${button.id} does not exist`);
+            return;
+        }
     }
 
     if (targetId === aboutMeID) {
         aboutTextContainer.innerHTML = aboutMeText;
-        aboutMeButton.className = selected;
-        aboutSiteButton.className = unselected;
+        aboutMeButton.className = selectedClass;
+        aboutSiteButton.className = unselectedClass;
     }
     if (targetId === aboutSiteID) {
         aboutTextContainer.innerHTML = aboutSiteText;
-        aboutMeButton.className = unselected;
-        aboutSiteButton.className = selected;
+        aboutMeButton.className = unselectedClass;
+        aboutSiteButton.className = selectedClass;
     }
 };
 
 (document.addEventListener("DOMContentLoaded", () => {
-    selectAboutSection(aboutMeID); // load
+    selectAboutSection(aboutMeID);
 }));

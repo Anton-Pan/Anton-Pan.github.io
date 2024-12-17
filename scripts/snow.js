@@ -1,64 +1,88 @@
-let settings = {
-    containers: [
-        /*
-        {
-            id: "snow-container-left",
-            distance: {
-                min: 0,
-                max: 25
+const snow = () => {
+    let config = {
+        containers: [
+            /*
+            {
+                id: "snow-container-left",
+                width: {
+                    min: 0,
+                    max: 25
+                }
+            },
+            {
+                id: "snow-container-right",
+                width: {
+                    min: 75,
+                    max: 100
+                }
             }
-        },
-        {
-            id: "snow-container-right",
-            distance: {
-                min: 75,
-                max: 100
+             */
+            {
+                id: "snow-container-full",
+                width: {
+                    // set to -0.5and 100.5 if pop-in/pop-out occurs
+                    min: -0.5,
+                    max: 100.5
+                }
             }
-        }
-         */
-        {
-            id: "snow-container-full",
-            distance: {
-                min: 0,
-                max: 100
-            }
-        }
-    ],
-    globals: {
+        ],
         animationLength: {
             min: 10,
             max: 20
         },
         animationDelays: { // animation delay so the snow instantly appears on screen
             min: 0,
-            max: null // set later to settings.globals.animationLength.max
+            max: null // set later to config.animationLength.max
         },
         snowflakesPerContainer: 50
     }
-}
-settings.globals.animationDelays.max = settings.globals.animationLength.max;
+    config.animationDelays.max = config.animationLength.max;
 
-function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min) + min);
-}
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
 
-(document.addEventListener("DOMContentLoaded", () => {
-    settings.containers.forEach((containerObj) => {
-        for (let i = 0; i < settings.globals.snowflakesPerContainer; i++) {
+    const updateSnowflake = (snowflake, containerWidth, firstLoop = false) => {
+        const sideInit = `${getRandom(containerWidth.min, containerWidth.max)}vw`;
+        const sideEnd = `${getRandom(containerWidth.min, containerWidth.max)}vw`;
+        const animationLength = getRandom(config.animationLength.min, config.animationLength.max);
+        let animationDelay;
+        snowflake.style.setProperty('--x-init', sideInit);
+        snowflake.style.setProperty('--x-end', sideEnd);
+        if (firstLoop) {
+            animationDelay = -1 * getRandom(config.animationDelays.min, config.animationDelays.max);
+
+        } else {
+            animationDelay = `0s`;
+            snowflake.style.setProperty('animation', `none`);  /* Workaorund for infinite animations  */
+            snowflake.offsetHeight;                                        /* not resetting their height properly */
+        }
+
+        snowflake.style.setProperty('animation', `snowfall linear infinite`);
+        snowflake.style.setProperty('animation-delay', `${animationDelay}s`);
+        snowflake.style.setProperty('animation-duration', `${animationLength}s`);
+    }
+
+    config.containers.forEach((containerObj) => {
+        for (let i = 0; i < config.snowflakesPerContainer; i++) {
             const container = document.getElementById(containerObj.id);
             const snowflake = document.createElement("div");
             snowflake.classList.add("snowflake");
-            const newSideIni = `${getRandom(containerObj.distance.min, containerObj.distance.max)}vw`;
-            const newSideEnd = `${getRandom(containerObj.distance.min, containerObj.distance.max)}vw`;
-            const newAnimationLength = getRandom(settings.globals.animationLength.min, settings.globals.animationLength.max);
-            const animationDelay = -1 * getRandom(settings.globals.animationDelays.min, settings.globals.animationDelays.max);
-            snowflake.style.setProperty('--x-init', newSideIni);
-            snowflake.style.setProperty('--x-end', newSideEnd);
-            snowflake.style.setProperty('animation', `snowfall ${newAnimationLength}s linear infinite`);
-            snowflake.style.setProperty('animation-delay', `${animationDelay}s`);
+
+            updateSnowflake(snowflake, containerObj.width, true);
+
+            snowflake.addEventListener("animationiteration", (event) => {
+                const snowflake = event.target;
+                updateSnowflake(snowflake, containerObj.width);
+            })
+
             container.appendChild(snowflake);
         }
     });
+}
+
+(document.addEventListener("DOMContentLoaded", () => {
+    snow();
 }));
 
 
