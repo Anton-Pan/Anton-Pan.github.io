@@ -231,7 +231,7 @@ button {
 }
 
 button:hover {
-	/* empty */
+	cursor: pointer;
 }
 
 button:hover::before {
@@ -267,10 +267,10 @@ button:hover .navbar-button-gradient {
 .section-header {
 	width:             100%;
 	text-transform:    lowercase;
-	scroll-margin-top: 4.25rem;
+	scroll-margin-top: 1.75rem;
 	background:        linear-gradient(-90deg, var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
 	padding:           0.25rem 0rem 0.25rem 0.5rem;
-	margin-bottom:     0.2rem;
+	margin-bottom:     0.25rem;
 }
 
 .section-header::before {
@@ -280,9 +280,9 @@ button:hover .navbar-button-gradient {
 
 .projects-container {
 	width:            100%;
-	aspect-ratio:     16/9;
 	display:          flex;
 	padding:          0.25rem 0.25rem;
+	aspect-ratio:     3/2;
 	background-color: var(--CustomDarkBlue);
 }
 
@@ -323,14 +323,12 @@ button:hover .navbar-button-gradient {
 .projects-item-picture {
 	width:        100%;
 	aspect-ratio: 4/3;
-
-	object-fit:   fill;
+	object-fit:   cover;
 }
 
 .projects-item-text {
 	padding-top: 0.5rem;
 	width:       100%;
-	height:      100%;
 }
 
 .about-container {
@@ -414,6 +412,10 @@ button:hover .navbar-button-gradient {
 	background-color: var(--CustomDarkBlue);
 	padding:          0.25rem;
 	overflow-x:       scroll;
+	/*
+	Carousel-Only CSS
+	aspect-ratio:     2;
+	 */
 }
 
 .photography-column {
@@ -422,6 +424,53 @@ button:hover .navbar-button-gradient {
 	flex-direction: column;
 	gap:            0.5rem;
 	padding:        0.25rem;
+}
+
+.photography-carousel-container {
+	width:           90%;
+	height:          100%;
+	border:          1px solid aquamarine;
+	display:         flex;
+	text-align:      center;
+	justify-content: space-around;
+	align-items:     center;
+}
+
+.carousel-image {
+	flex: 1;
+}
+
+.c-i-l-1 {
+	position:     relative;
+	--imageCount: 3;
+	z-index:      3;
+	width:        calc(100% + (30% * 3));
+}
+
+.c-i-l-2-l {
+	position:     relative;
+	--imageCount: 3;
+	z-index:      2;
+	width:        calc(100% + (15% * 2));
+	left:         auto;
+}
+
+.c-i-l-2-r {
+	position:     relative;
+	--imageCount: 3;
+	z-index:      2;
+	width:        calc(100% + (15% * 2));
+	right:        auto;
+}
+
+.photography-carousel-arrow {
+	width:           5%;
+	height:          100%;
+	display:         flex;
+	text-align:      center;
+	justify-content: space-around;
+	align-items:     center;
+	border:          1px solid red;
 }
 
 .footer {

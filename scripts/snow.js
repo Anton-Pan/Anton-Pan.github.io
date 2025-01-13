@@ -1,22 +1,6 @@
 const snow = () => {
     let config = {
         containers: [
-            /*
-            {
-                id: "snow-container-left",
-                width: {
-                    min: 0,
-                    max: 25
-                }
-            },
-            {
-                id: "snow-container-right",
-                width: {
-                    min: 75,
-                    max: 100
-                }
-            }
-             */
             {
                 id: "snow-container-full",
                 width: {

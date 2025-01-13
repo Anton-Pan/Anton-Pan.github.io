@@ -80,7 +80,7 @@ const typingTextEfect = async (aestheticTextArray) => {
 }
 
 (document.addEventListener("DOMContentLoaded", () => {
-    fetch('./data/json/aesthetic-text.json')
+    fetch('./assets/json/aesthetic-text.json')
         .then((response) => response.json())
         .then((json) => (typingTextEfect(json)));
 }));
