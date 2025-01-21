@@ -1,4 +1,8 @@
 const snow = () => {
+    const getRandomInt = (min, max) => {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
     let config = {
         containers: [
             {
@@ -22,19 +26,15 @@ const snow = () => {
     }
     config.animationDelays.max = config.animationLength.max;
 
-    function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min) + min);
-    }
-
     const updateSnowflake = (snowflake, containerWidth, firstLoop = false) => {
-        const sideInit = `${getRandom(containerWidth.min, containerWidth.max)}vw`;
-        const sideEnd = `${getRandom(containerWidth.min, containerWidth.max)}vw`;
-        const animationLength = getRandom(config.animationLength.min, config.animationLength.max);
+        const sideInit = `${getRandomInt(containerWidth.min, containerWidth.max)}vw`;
+        const sideEnd = `${getRandomInt(containerWidth.min, containerWidth.max)}vw`;
+        const animationLength = getRandomInt(config.animationLength.min, config.animationLength.max);
         let animationDelay;
         snowflake.style.setProperty('--x-init', sideInit);
         snowflake.style.setProperty('--x-end', sideEnd);
         if (firstLoop) {
-            animationDelay = -1 * getRandom(config.animationDelays.min, config.animationDelays.max);
+            animationDelay = -1 * getRandomInt(config.animationDelays.min, config.animationDelays.max);
 
         } else {
             animationDelay = `0s`;
@@ -68,7 +68,6 @@ const snow = () => {
 (document.addEventListener("DOMContentLoaded", () => {
     snow();
 }));
-
 
 /*
 // SCSS - for reference

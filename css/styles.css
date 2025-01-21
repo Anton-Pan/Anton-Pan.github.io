@@ -40,13 +40,6 @@ body {
 	color:           var(--CustomTextColor);
 }
 
-
-.matrix-digital-rain-container {
-	width:  100vh;
-	height: 25vw;
-	rotate: 90deg;
-}
-
 .side-text-left {
 	/* left-only */
 	background:              -webkit-linear-gradient(
@@ -118,11 +111,6 @@ body {
 	padding:                      0.5rem;
 }
 
-img {
-	border: 1px solid var(--CustomContainerBackground);
-	width:  100%;
-}
-
 @media (min-width: 1920px) {
 	.main-container {
 		width: 50%;
@@ -133,20 +121,36 @@ img {
 	.main-container {
 		width: calc(-0.143 * 100vw + 1235px); /* linear equation for smooth zooming */
 	}
-
-	/*
-	.scrolling-aesthetic-text-side-container-left {
-		width: calc(50vw - ((-0.143 * 100vw + 1235px)/2));
-	}
-	.scrolling-aesthetic-text-side-container-right {
-		width: calc(50vw - ((-0.143 * 100vw + 1235px)/2));
-	}
-	*/
 }
 
 @media (max-width: 1080px) {
 	.main-container {
 		width: 100%;
+	}
+}
+
+img {
+	border: 1px solid var(--CustomContainerBackground);
+	width:  100%;
+}
+
+.logotype {
+	margin-top:    2.5em;
+	margin-bottom: 2.25em;
+	width:         75%;
+}
+
+@media (orientation: portrait) {
+	.logotype {
+		width: 100%;
+	}
+}
+
+@media (orientation: landscape) {
+	.logotype {
+		margin-top:    2.5em;
+		margin-bottom: 2.25em;
+		width:         75%;
 	}
 }
 
@@ -282,12 +286,11 @@ button:hover .navbar-button-gradient {
 	width:            100%;
 	display:          flex;
 	padding:          0.25rem 0.25rem;
-	aspect-ratio:     3/2;
 	background-color: var(--CustomDarkBlue);
+	align-items:      stretch;
 }
 
 .projects-item-outside-container {
-	height:     100%;
 	flex:       1;
 	background: var(--CustomDarkBlue);
 	padding:    0.25rem;
@@ -337,12 +340,42 @@ button:hover .navbar-button-gradient {
 	aspect-ratio: 3;
 }
 
+@media (orientation: portrait) {
+	.about-container {
+		aspect-ratio:   auto;
+		flex-direction: column;
+	}
+}
+
+@media (orientation: landscape) {
+	.about-container {
+		aspect-ratio:   3;
+		flex-direction: row;
+	}
+}
+
 .about-photo-container {
 	aspect-ratio: 1/1;
 	height:       100%;
 	padding:      2rem;
 	background:   linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
 	margin-right: 0.1rem;
+}
+
+@media (orientation: portrait) {
+	.about-photo-container {
+		padding: 0.5rem 0.5rem 0 0.5rem;
+		margin-right: 0;
+		margin-bottom: 0.2rem;
+	}
+}
+
+@media (orientation: landscape) {
+	.about-photo-container {
+		padding: 2rem;
+		margin-right: 0.1rem;
+		margin-bottom: 0;
+	}
 }
 
 .about-content-container {
@@ -424,6 +457,24 @@ button:hover .navbar-button-gradient {
 	flex-direction: column;
 	gap:            0.5rem;
 	padding:        0.25rem;
+}
+
+@media (min-width: 1080px) {
+	.photography-column {
+		min-width: 25%;
+	}
+}
+
+@media (min-width: 720px) {
+	.photography-column {
+		min-width: 50%;
+	}
+}
+
+@media (max-width: 360px) {
+	.main-container {
+		width: 100%;
+	}
 }
 
 .photography-carousel-container {
