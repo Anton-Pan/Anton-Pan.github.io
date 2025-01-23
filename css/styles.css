@@ -24,11 +24,12 @@
 }
 
 :root {
-	min-height: 100vh;
-	min-width:  99vw;
-	margin:     0;
-	background: linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%) fixed;
-	z-index:    2;
+	min-height:      100vh;
+	min-width:       99vw;
+	margin:          0;
+	background:      linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%) fixed;
+	z-index:         2;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -111,19 +112,31 @@ body {
 	padding:                      0.5rem;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1920px) or (orientation: landscape) {
 	.main-container {
-		width: 50%;
+		width: 55%;
 	}
 }
 
-@media (max-width: 1919px) and (min-width: 1081px) {
+@media (max-width: 1919px) and (min-width: 1081px) and (orientation: landscape) {
+	/*
+	MinWidthPx:    1080;
+	MinWidthRatio: 1.00;
+	MaxWidthPx:    1920;
+	MaxWidthRatio: 0.55;
+	https://www.geogebra.org/
+	Point 1: (MinPX, MinVW * MinPX)
+	Point 2: (MaxPx, MaxVW * MaxPx)
+	--Y:             0.09;
+	--B:             987px;
+	*/
 	.main-container {
-		width: calc(-0.143 * 100vw + 1235px); /* linear equation for smooth zooming */
+		width: calc(-0.03 * 100vw + 1110px); /* linear equation for smooth zooming form 50-100 vw*/
+		/* width: calc(0.09 * 100vw + 987px); /* linear equation for smooth zooming form 60-100 vw */
 	}
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1080px) or (orientation: portrait) {
 	.main-container {
 		width: 100%;
 	}
@@ -134,16 +147,15 @@ img {
 	width:  100%;
 }
 
+
 .logotype {
 	margin-top:    2.5em;
 	margin-bottom: 2.25em;
 	width:         75%;
 }
 
-@media (orientation: portrait) {
-	.logotype {
-		width: 100%;
-	}
+.banner-photo {
+	visibility: visible;
 }
 
 @media (orientation: landscape) {
@@ -151,6 +163,20 @@ img {
 		margin-top:    2.5em;
 		margin-bottom: 2.25em;
 		width:         75%;
+	}
+
+	.decoration-photo {
+		display: block;
+	}
+}
+
+@media (orientation: portrait) {
+	.logotype {
+		width: 100%;
+	}
+
+	.decoration-photo {
+		display: none;
 	}
 }
 
@@ -335,28 +361,28 @@ button:hover .navbar-button-gradient {
 }
 
 .about-container {
-	width:        100%;
-	display:      flex;
-	aspect-ratio: 3;
+	width:                 100%;
+	display:               grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+@media (orientation: landscape) {
+	.about-container {
+		display:               grid;
+		grid-template-columns: 1fr 2fr;
+	}
 }
 
 @media (orientation: portrait) {
 	.about-container {
+		display:        flex;
 		aspect-ratio:   auto;
 		flex-direction: column;
 	}
 }
 
-@media (orientation: landscape) {
-	.about-container {
-		aspect-ratio:   3;
-		flex-direction: row;
-	}
-}
-
 .about-photo-container {
 	aspect-ratio: 1/1;
-	height:       100%;
 	padding:      2rem;
 	background:   linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
 	margin-right: 0.1rem;
@@ -364,16 +390,16 @@ button:hover .navbar-button-gradient {
 
 @media (orientation: portrait) {
 	.about-photo-container {
-		padding: 0.5rem 0.5rem 0 0.5rem;
-		margin-right: 0;
+		padding:       0.5rem 0.5rem 0 0.5rem;
+		margin-right:  0;
 		margin-bottom: 0.2rem;
 	}
 }
 
 @media (orientation: landscape) {
 	.about-photo-container {
-		padding: 2rem;
-		margin-right: 0.1rem;
+		padding:       2rem;
+		margin-right:  0.1rem;
 		margin-bottom: 0;
 	}
 }
@@ -385,6 +411,7 @@ button:hover .navbar-button-gradient {
 	width:          100%;
 	background:     linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
 	margin-left:    0.1rem;
+
 }
 
 .about-navigation {
@@ -408,9 +435,8 @@ button:hover .navbar-button-gradient {
 
 .about-text {
 	width:         100%;
-	height:        85%; /* keep spacing equal for button conatienr */
-	padding:       1rem;
-	overflow:      hidden;
+	height:        90%; /* -10% to match nav buttons spacing on the bottom */
+	padding:       1rem 1rem 0rem 1rem;
 	text-overflow: ellipsis;
 }
 
@@ -438,42 +464,41 @@ button:hover .navbar-button-gradient {
 	text-overflow: ellipsis;
 }
 
-.photography-container {
+.photography-outer-container {
+	width:            100%;
+	background-color: var(--CustomDarkBlue);
+	padding:          0.5rem 0.5rem 0.5rem 0.5rem;
+	overflow-x:       hidden;
+}
+
+.photography-inner-container {
 	width:            100%;
 	display:          flex;
 	flex-direction:   row;
 	background-color: var(--CustomDarkBlue);
-	padding:          0.25rem;
 	overflow-x:       scroll;
-	/*
-	Carousel-Only CSS
-	aspect-ratio:     2;
-	 */
+	scroll-snap-type: x mandatory;
+	gap:              0.5rem;
+	padding-bottom:   0.5rem;
 }
 
 .photography-column {
 	min-width:      25%;
+	min-height:     100%;
 	display:        flex;
 	flex-direction: column;
 	gap:            0.5rem;
-	padding:        0.25rem;
 }
 
-@media (min-width: 1080px) {
+@media (orientation: landscape) {
 	.photography-column {
 		min-width: 25%;
 	}
 }
 
-@media (min-width: 720px) {
+@media (orientation: portrait) {
 	.photography-column {
 		min-width: 50%;
-	}
-}
-
-@media (max-width: 360px) {
-	.main-container {
-		width: 100%;
 	}
 }
 

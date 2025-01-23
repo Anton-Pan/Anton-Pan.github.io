@@ -1,14 +1,15 @@
 Hi! I'm Anton - the developer of this site!
 <br>
-I'm a third-year at Simon Fraser University, in Vancouver, B.C., studying Computing Science.
+I'm a third-year student at Simon Fraser University, in Vancouver, B.C., studying Computing Science.
 <br>
-I've been working as a full-stack web developer for the past ${yearsSinceHighSchool()} years, since before I even finished high school.
+I've been working as a full-stack web developer since 2021, with my main focus being React-based websites,
+including single-page invoice generators, concert ticketing websites and everything in between.
 <br>
-In addition to English, I speak fluent Russian, having spoken it at home my entire life, and French, from participating in
-the French Immersion Program throughout my entire K-12 schooling.
+In addition to studying at SFU, I am an active member of <a href="https://sfusurge.com/">SFU Surge</a>, my university's
+largest student-led tech-focused organisation, where I have held the position of photographer/social media executive
+since September 2024.
 <br>
-I have a passion for anything old and outdated, especially anything from the Y2K era like classic iPods, digicams and CDs,
-which I heavily use as inspiration in my work.
-<br>
-I have been a member of <a href="https://sfusurge.com/">SFU Surge</a>, my university's largest student-led tech-focused organisation,
-since September 2024, and currently hold the position of photographer/social media executive.
+I spend my free time listening to music (I'm particularly fond of
+<a href="https://www.youtube.com/watch?v=ap0mqwvf7H0">Taking Back Sunday</a> and
+<a href="https://www.youtube.com/watch?v=PoTu269qSnw">Porter Robinson</a>), and tinkering with technology.
+From engines to film cameras - if I can get my hands on it, chances are that it will be taken apart at some point.

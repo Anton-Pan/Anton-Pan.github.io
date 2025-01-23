@@ -1,1 +1,16 @@
-TODO - add text lols
+This site is heavily inspired by websites from the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>.
+<br>
+I chose it due to its uniqueness and recognizability - even those who didn't grow up on those Adobe Flash-based sites will
+immediately catch it's sharp angles, metallic sheen and techno-futurism.
+<br>
+The inspiration isn't just surface-level - those who grew up browsing Angelfire and Geocities sites will recognize the
+<a href="https://en.wikipedia.org/wiki/Matrix_digital_rain">Matrix</a>/<a href="https://lain.wiki/images/e/ee/Metaphorlize.jpg">Lain</a>
+-like scrolling text, and the ever-ubiquitous snow that covered the web every December in 200X.
+<br>
+However, this approach isn't just an exercise in creativity - there exists a practical side to it, too.
+<br>
+Just like students learn their country's history in school, I believe that developers have a duty to learn about the
+past of their world - in order to truly understand current trends and technologies, we must educate ourselves about
+those of the past, and learn from their successes and failures. <br>
+<br>
+<marquee>Anyone remember the &lt;marquee&gt; tag?</marquee>

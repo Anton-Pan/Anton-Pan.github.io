@@ -12,6 +12,11 @@
 	<script src="./scripts/typingTextEffect.js"></script>
 	<script src="./scripts/selectAboutSection.js"></script>
 </head>
+<!--
+	TODO:
+		  - create 404 page - resume isn't implemented yet
+		  - create resume page + downloadable option through the dropdown menu
+-->
 <body>
 <div class="snow-container-full" id="snow-container-full"></div>
 <div class="side-text-left" id="side-text-left"></div>
@@ -20,7 +25,6 @@
 	     alt="An abstract, blue-colored decorative header banner image."/>
 	<img class="logotype" src="./assets/interface/self/logotype.png"
 	     alt="A logotype containing my mirrored last name, four colored dots and my first name."/>
-
 	<!-- Navigation START-->
 	<div class="navbar-outer-container">
 		<div class="navbar-inner-container" id="navigation">
@@ -49,7 +53,8 @@
 	</div>
 	<!-- Navigation END-->
 
-	<img src="./assets/interface/backgrounds/cityscape.png" style="margin-bottom: 0.25rem;" alt="A blue cityscape."/>
+	<img class="decoration-photo" src="./assets/interface/backgrounds/cityscape.png" style="margin-bottom: 0.25rem;"
+	     alt="A blue cityscape."/>
 
 	<!-- About START-->
 	<div class="section-header" id="about">about</div>
@@ -139,72 +144,68 @@
 	<!-- Projects END -->
 
 	<!-- Photography START -->
+	<!--
+	    TODO: style scrollbar to fit site theme
+	 -->
 	<div class="section-header" id="photography">photography</div>
-	<div class="photography-container" style="margin-bottom: 0.25rem">
-		<!--
-		<div class="photography-carousel-arrow"><</div>
-		<div class="photography-carousel-container" id="photo-carousel">
-			<img class="c-i-l-2-l" src="assets/photos/horizontal/trainyard.jpeg"/>
-			<img class="c-i-l-1" src="assets/photos/horizontal/sunset-and-balconies.jpeg"/>
-			<img class="c-i-l-2-r" src="assets/photos/horizontal/snowy-field.jpeg"/>
-		</div>
-		<div class="photography-carousel-arrow">\<</div>
-		-->
-		<div class="photography-column">
-			<img src="assets/photos/vertical/aurora-1.jpeg"/>
-			<img src="assets/photos/horizontal/cat-1.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/film-on-rainy-window.jpeg"/>
-			<img src="assets/photos/vertical/autumn-house.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/balconies-1.jpeg"/>
-			<img src="assets/photos/horizontal/foggy-streetlights.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/fogy-streetlight-1.jpeg"/>
-			<img src="assets/photos/vertical/balconies-3.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/banconies-2.jpeg"/>
-			<img src="assets/photos/horizontal/horse.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/leaves-2.jpeg"/>
-			<img src="assets/photos/vertical/cat-in-tree.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/diner.jpeg"/>
-			<img src="assets/photos/horizontal/snowy-bridge-at-night.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/snowy-field.jpeg"/>
-			<img src="assets/photos/vertical/granville.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/leaves-1.jpeg"/>
-			<img src="assets/photos/horizontal/snowy-night-alley.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/snowy-overpass-1.jpeg"/>
-			<img src="assets/photos/vertical/neon-sign.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/palm-trees.jpeg"/>
-			<img src="assets/photos/horizontal/spiderweb-on-dead-plant.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/sunset-and-balconies.jpeg"/>
-			<img src="assets/photos/vertical/pool-and-balconies.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/vertical/regis-hotel.jpeg"/>
-			<img src="assets/photos/horizontal/tail-light-trails-horizontal.jpeg"/>
-		</div>
-		<div class="photography-column">
-			<img src="assets/photos/horizontal/trainyard.jpeg"/>
-			<img src="assets/photos/vertical/seagulls.jpeg"/>
+	<div class="photography-outer-container" style="margin-bottom: 0.25rem">
+		<div class="photography-inner-container">
+			<div class="photography-column">
+				<img src="assets/photos/vertical/aurora-1.jpeg"/>
+				<img src="assets/photos/horizontal/cat-1.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/film-on-rainy-window.jpeg"/>
+				<img src="assets/photos/vertical/autumn-house.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/vertical/balconies-1.jpeg"/>
+				<img src="assets/photos/horizontal/foggy-streetlights.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/fogy-streetlight-1.jpeg"/>
+				<img src="assets/photos/vertical/balconies-3.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/vertical/banconies-2.jpeg"/>
+				<img src="assets/photos/horizontal/horse.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/leaves-2.jpeg"/>
+				<img src="assets/photos/vertical/cat-in-tree.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/vertical/diner.jpeg"/>
+				<img src="assets/photos/horizontal/snowy-bridge-at-night.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/snowy-field.jpeg"/>
+				<img src="assets/photos/vertical/granville.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/vertical/leaves-1.jpeg"/>
+				<img src="assets/photos/horizontal/snowy-night-alley.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/snowy-overpass-1.jpeg"/>
+				<img src="assets/photos/vertical/neon-sign.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/vertical/palm-trees.jpeg"/>
+				<img src="assets/photos/horizontal/spiderweb-on-dead-plant.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/sunset-and-balconies.jpeg"/>
+				<img src="assets/photos/vertical/pool-and-balconies.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/tail-light-trails-horizontal.jpeg"/>
+				<img src="assets/photos/vertical/regis-hotel.jpeg"/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photos/horizontal/trainyard.jpeg"/>
+				<img src="assets/photos/vertical/seagulls.jpeg"/>
+			</div>
 		</div>
 	</div>
 	<!-- Photography END -->
@@ -230,3 +231,7 @@
 <div class="side-text-right" id="side-text-right"></div>
 </body>
 </html>
+<!--
+	Credits:
+	TODO - write credits for free/spen-source assets used
+-->
