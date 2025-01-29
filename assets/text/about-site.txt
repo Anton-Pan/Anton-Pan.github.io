@@ -1,4 +1,6 @@
-This site is heavily inspired by websites from the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>.
+This site is heavily inspired by websites from the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>, and by the aesthetics of the
+<a href="https://www.youtube.com/watch?v=b06pKMxF6h8">Vir</a><a href="https://www.youtube.com/watch?v=HPc8QMycGno">tua</a><a href="https://www.youtube.com/watch?v=e7QeR0VxnlA">l S</a><a href="https://www.youtube.com/watch?v=zdLhJ9lB5x0">elf</a>
+musical project.
 <br>
 I chose it due to its uniqueness and recognizability - even those who didn't grow up on those Adobe Flash-based sites will
 immediately catch it's sharp angles, metallic sheen and techno-futurism.
@@ -13,4 +15,8 @@ Just like students learn their country's history in school, I believe that devel
 past of their world - in order to truly understand current trends and technologies, we must educate ourselves about
 those of the past, and learn from their successes and failures. <br>
 <br>
-<marquee>Anyone remember the &lt;marquee&gt; tag?</marquee>
+<div class="marquee-container">
+    <div class="marquee-text">
+        Anyone remember the &lt;marquee&gt; tag?
+    </div>
+</div>

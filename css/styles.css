@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "160MKSDAL";
+	src:         url("../project_assets/160MKSDAL Regular.ttf");
+}
+
 :root {
 	/* Color Scheme */
 	--CustomBlack:               rgb(20, 20, 20);
@@ -16,6 +21,13 @@
 	--Button-Light:              rgb(56, 71, 103);
 	--Button-Hover-Dark:         rgb(168, 138, 88);
 	--Button-Hover-Light:        rgb(187, 152, 104);
+	/* Everything Else */
+	min-height:                  100vh;
+	min-width:                   99vw;
+	margin:                      0;
+	background:                  linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%) fixed;
+	z-index:                     2;
+	scroll-behavior:             smooth;
 }
 
 * {
@@ -23,21 +35,13 @@
 	color:      var(--CustomTextColor);
 }
 
-:root {
-	min-height:      100vh;
-	min-width:       99vw;
-	margin:          0;
-	background:      linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%) fixed;
-	z-index:         2;
-	scroll-behavior: smooth;
-}
 
 body {
 	margin:          0;
 	display:         flex;
 	justify-content: center;
 	align-items:     center;
-	font-family:     Arial, Sans-Serif, monospace;
+	font-family:     Calibri, sans-serif, monospace;
 	color:           var(--CustomTextColor);
 }
 
@@ -147,10 +151,23 @@ img {
 	width:  100%;
 }
 
+button {
+	border:          none;
+	text-align:      center;
+	display:         flex;
+	justify-content: center;
+	align-items:     center;
+	text-transform:  uppercase;
+	letter-spacing:  0.2rem;
+	color:           ghostwhite;
+	font-family:     "160MKSDAL", sans-serif;
+	font-weight:     bold;
+	width:           100%;
+}
 
 .logotype {
-	margin-top:    2.5em;
-	margin-bottom: 2.25em;
+	margin-top:    2.25rem;
+	margin-bottom: 2.25rem;
 	width:         75%;
 }
 
@@ -160,8 +177,8 @@ img {
 
 @media (orientation: landscape) {
 	.logotype {
-		margin-top:    2.5em;
-		margin-bottom: 2.25em;
+		margin-top:    2.25rem;
+		margin-bottom: 2.25rem;
 		width:         75%;
 	}
 
@@ -172,7 +189,9 @@ img {
 
 @media (orientation: portrait) {
 	.logotype {
-		width: 100%;
+		margin-top:    0.25rem;
+		margin-bottom: 0.25rem;
+		width:         100%;
 	}
 
 	.decoration-photo {
@@ -182,6 +201,7 @@ img {
 
 .navbar-outer-container {
 	display:          flex;
+	flex-direction:   column;
 	justify-content:  center;
 	align-items:      center;
 	width:            100%;
@@ -198,21 +218,42 @@ img {
 	width:            100%;
 	background-color: var(--CustomDarkBlue);
 	position:         sticky;
-	padding:          0.5rem 0rem;
+	padding:          0.5rem;
 	top:              0;
+	gap:              0.5rem;
 }
 
-button {
-	border:          none;
-	text-align:      center;
-	display:         flex;
-	justify-content: center;
-	align-items:     center;
-	text-transform:  uppercase;
-	font-weight:     bold;
-	letter-spacing:  0.2rem;
-	color:           ghostwhite;
-	font-size:       small;
+@media (orientation: landscape) {
+	.navbar-inner-container {
+		flex-direction: row;
+	}
+}
+
+@media (orientation: portrait) {
+	.navbar-inner-container {
+		flex-direction: column;
+	}
+}
+
+.navbar-header-text {
+	flex:        1;
+	width:       100%;
+	text-align:  left;
+	font-size:   25px;
+	font-family: "160MKSDAL", sans-serif;
+	color:       ghostwhite;
+}
+
+@media (orientation: landscape) {
+	.navbar-header-text {
+		display: none;
+	}
+}
+
+@media (orientation: portrait) {
+	.navbar-header-text {
+		display: block;
+	}
 }
 
 .navbar-button {
@@ -221,7 +262,6 @@ button {
 	z-index:          1;
 	position:         relative;
 	flex:             1;
-	margin:           0rem 0.25rem;
 	min-height:       2rem;
 	border-radius:    0.5rem;
 	overflow:         hidden;
@@ -251,27 +291,47 @@ button {
 			var(--Button-Dark) 100%) no-repeat;
 }
 
+@media (orientation: portrait) {
+	.navbar-button-gradient {
+		background: linear-gradient(45deg,
+		var(--Button-Dark) 0%,
+		transparent 25%,
+		var(--Button-Light) 25%,
+		transparent 50%,
+		var(--Button-Light) 75%,
+		transparent 75%,
+		var(--Button-Dark) 100%) no-repeat,
+		            linear-gradient(135deg,
+				var(--Button-Dark) 0%,
+				transparent 25%,
+				var(--Button-Light) 25%,
+				transparent 50%,
+				var(--Button-Light) 75%,
+				transparent 75%,
+				var(--Button-Dark) 100%) no-repeat;
+	}
+}
+
 .navbar-button-text {
 	z-index:        1;
 	text-transform: uppercase;
-	font-weight:    bold;
 	letter-spacing: 0.2rem;
 	color:          ghostwhite;
 	pointer-events: none;
 }
 
-button:hover {
+button:hover, button:active {
 	cursor: pointer;
 }
 
-button:hover::before {
+button:hover::before, button:active::before {
 	z-index: 1;
-	content: ">";
+	content: ">>";
 }
 
-button:hover::after {
+button:hover::after, button:active::after {
 	z-index: 1;
-	content: "<";
+	content: "<<";
 }
 
 button:hover .navbar-button-gradient {
@@ -296,6 +356,7 @@ button:hover .navbar-button-gradient {
 
 .section-header {
 	width:             100%;
+	font-family:       "160MKSDAL", sans-serif;
 	text-transform:    lowercase;
 	scroll-margin-top: 1.75rem;
 	background:        linear-gradient(-90deg, var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
@@ -304,254 +365,15 @@ button:hover .navbar-button-gradient {
 }
 
 .section-header::before {
-	/* content: "\21A7    "; //unicode for down arrow */
 	content: "// ";
 }
 
-.projects-container {
-	width:            100%;
-	display:          flex;
-	padding:          0.25rem 0.25rem;
-	background-color: var(--CustomDarkBlue);
-	align-items:      stretch;
-}
-
-.projects-item-outside-container {
-	flex:       1;
-	background: var(--CustomDarkBlue);
-	padding:    0.25rem;
-	overflow:   hidden;
-}
-
-.projects-item-middle-container {
-	width:            100%;
-	height:           100%;
-	background-color: var(--CustomContainerBackground);
-	padding:          0.25rem;
-	overflow:         hidden;
-	display:          flex;
-	flex-direction:   column;
-}
-
-.projects-item-inside-container {
-	flex-grow:      1;
-	width:          100%;
-	padding:        1rem;
-	display:        flex;
-	flex-direction: column;
-	background:     linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
-}
-
-.projects-item-header {
-	color:          ghostwhite;
-	width:          100%;
-	text-transform: uppercase;
-	padding:        0.25rem 0rem 0.25rem 0.25rem;
-}
-
-.projects-item-picture {
-	width:        100%;
-	aspect-ratio: 4/3;
-	object-fit:   cover;
-}
-
-.projects-item-text {
-	padding-top: 0.5rem;
-	width:       100%;
-}
-
-.about-container {
-	width:                 100%;
-	display:               grid;
-	grid-template-columns: 1fr 2fr;
-}
-
-@media (orientation: landscape) {
-	.about-container {
-		display:               grid;
-		grid-template-columns: 1fr 2fr;
-	}
-}
-
-@media (orientation: portrait) {
-	.about-container {
-		display:        flex;
-		aspect-ratio:   auto;
-		flex-direction: column;
-	}
-}
-
-.about-photo-container {
-	aspect-ratio: 1/1;
-	padding:      2rem;
-	background:   linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
-	margin-right: 0.1rem;
-}
-
-@media (orientation: portrait) {
-	.about-photo-container {
-		padding:       0.5rem 0.5rem 0 0.5rem;
-		margin-right:  0;
-		margin-bottom: 0.2rem;
-	}
-}
-
-@media (orientation: landscape) {
-	.about-photo-container {
-		padding:       2rem;
-		margin-right:  0.1rem;
-		margin-bottom: 0;
-	}
-}
-
-.about-content-container {
-	display:        flex;
-	flex-direction: column;
-	height:         100%;
-	width:          100%;
-	background:     linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
-	margin-left:    0.1rem;
-
-}
-
-.about-navigation {
-	width:         100%;
-	height:        10%;
-	border-bottom: 0.2rem solid var(--CustomContainerBackground);
-	display:       flex;
-}
-
-.about-navigation-button-selected {
-	flex:             1;
-	border-radius:    0;
-	background-color: var(--CustomContainerBackground);
-}
-
-.about-navigation-button-unselected {
-	flex:             1;
-	border-radius:    0;
-	background-color: transparent;
-}
-
-.about-text {
-	width:         100%;
-	height:        90%; /* -10% to match nav buttons spacing on the bottom */
-	padding:       1rem 1rem 0rem 1rem;
-	text-overflow: ellipsis;
-}
-
-.about-text-middle-container-link-container {
-	width:           100%;
-	height:          10%;
-	display:         flex;
-	padding:         0rem 0.75rem;
-	justify-content: space-around;
-	text-align:      center;
-	align-items:     center;
-}
-
-.about-text-middle-container-link-button {
-	width:   100%;
-	height:  2rem;
-	display: flex;
-}
-
-.about-text-inner-container {
-	padding:       0.5rem;
-	flex:          1;
-	height:        100%;
-	width:         100%;
-	text-overflow: ellipsis;
-}
-
-.photography-outer-container {
-	width:            100%;
-	background-color: var(--CustomDarkBlue);
-	padding:          0.5rem 0.5rem 0.5rem 0.5rem;
-	overflow-x:       hidden;
-}
-
-.photography-inner-container {
-	width:            100%;
-	display:          flex;
-	flex-direction:   row;
-	background-color: var(--CustomDarkBlue);
-	overflow-x:       scroll;
-	scroll-snap-type: x mandatory;
-	gap:              0.5rem;
-	padding-bottom:   0.5rem;
-}
-
-.photography-column {
-	min-width:      25%;
-	min-height:     100%;
-	display:        flex;
-	flex-direction: column;
-	gap:            0.5rem;
-}
-
-@media (orientation: landscape) {
-	.photography-column {
-		min-width: 25%;
-	}
-}
-
-@media (orientation: portrait) {
-	.photography-column {
-		min-width: 50%;
-	}
-}
-
-.photography-carousel-container {
-	width:           90%;
-	height:          100%;
-	border:          1px solid aquamarine;
-	display:         flex;
-	text-align:      center;
-	justify-content: space-around;
-	align-items:     center;
-}
-
-.carousel-image {
-	flex: 1;
-}
-
-.c-i-l-1 {
-	position:     relative;
-	--imageCount: 3;
-	z-index:      3;
-	width:        calc(100% + (30% * 3));
-}
-
-.c-i-l-2-l {
-	position:     relative;
-	--imageCount: 3;
-	z-index:      2;
-	width:        calc(100% + (15% * 2));
-	left:         auto;
-}
-
-.c-i-l-2-r {
-	position:     relative;
-	--imageCount: 3;
-	z-index:      2;
-	width:        calc(100% + (15% * 2));
-	right:        auto;
-}
-
-.photography-carousel-arrow {
-	width:           5%;
-	height:          100%;
-	display:         flex;
-	text-align:      center;
-	justify-content: space-around;
-	align-items:     center;
-	border:          1px solid red;
-}
+sup { vertical-align: top; font-size: 0.6em; }
 
 .footer {
-	position: relative;
-	width:    100%;
+	font-family: "160MKSDAL", sans-serif;
+	position:    relative;
+	width:       100%;
 }
 
 .footer-image {

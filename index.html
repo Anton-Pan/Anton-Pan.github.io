@@ -5,30 +5,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>a n t o n | p.</title>
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/about-section.css">
+	<link rel="stylesheet" href="css/projects-section.css">
+	<link rel="stylesheet" href="css/photography-section.css">
 	<link rel="stylesheet" href="css/snow.css">
+	<!-- <link rel="stylesheet" href="css/hamburger.css"> -->
 	<link rel="icon" href="./favicon.ico">
-	<script src="./scripts/minorScripts.js"></script>
+	<script src="./scripts/helper-scripts.js"></script>
+	<!-- <script src="./scripts/hamburger.js"></script> -->
 	<script src="./scripts/snow.js"></script>
-	<script src="./scripts/typingTextEffect.js"></script>
-	<script src="./scripts/selectAboutSection.js"></script>
+	<script src="./scripts/scrolling-typing-text.js"></script>
+	<script src="./scripts/select-about-section.js"></script>
 </head>
-<!--
-	TODO:
-		  - create 404 page - resume isn't implemented yet
-		  - create resume page + downloadable option through the dropdown menu
--->
 <body>
 <div class="snow-container-full" id="snow-container-full"></div>
 <div class="side-text-left" id="side-text-left"></div>
 <div class="main-container">
-	<img src="./assets/interface/backgrounds/headerBanner.png"
+	<img src="./assets/interface/backgrounds/header-banner.png"
+	     style="margin-bottom: 0.25rem"
 	     alt="An abstract, blue-colored decorative header banner image."/>
 	<img class="logotype" src="./assets/interface/self/logotype.png"
 	     alt="A logotype containing my mirrored last name, four colored dots and my first name."/>
 	<!-- Navigation START-->
 	<div class="navbar-outer-container">
 		<div class="navbar-inner-container" id="navigation">
-			<button class="navbar-button" onclick="navigateTo('#about')" style="margin-left: 0.5rem">
+			<!-- WIP Hamburger Button for collapsible navigation menu
+			<div class="hamburger-container">
+				<div class="hamburger-pyramid-down" id="hamburger">
+					<div class="bar-top"></div>
+					<div class="bar-middle"></div>
+					<div class="bar-bottom"></div>
+				</div>
+			</div>
+			-->
+			<button class="navbar-button" onclick="navigateTo('#about')">
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">About</div>
 			</button>
@@ -36,7 +46,7 @@
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Projects</div>
 			</button>
-			<button class="navbar-button" style="flex-grow: 1.3" onclick="navigateTo('#photography')">
+			<button class="navbar-button" onclick="navigateTo('#photography')">
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Photography</div>
 			</button>
@@ -44,7 +54,7 @@
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Resume</div>
 			</button>
-			<button class="navbar-button" style="margin-right: 0.5rem"
+			<button class="navbar-button"
 			        onclick="window.open('https://github.com/Anton-Pan')">
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Github</div>
@@ -73,7 +83,9 @@
 					About The Site
 				</button>
 			</div>
-			<div class="about-text" id="about-text-container">placeholder</div>
+			<div class="about-text" id="about-text-container">
+				Loading...
+			</div>
 		</div>
 	</div>
 	<!-- About END-->
@@ -85,22 +97,24 @@
 		<div class="projects-item-outside-container">
 			<div class="projects-item-middle-container">
 				<div class="projects-item-header">
-					TicketRebel (2024 - Present)
+					<div class="projects-item-header-text">TicketRebel</div>
+					<div class="projects-item-header-text">[ 2024 - Present ]</div>
 				</div>
 				<div class="projects-item-inside-container">
-					<!-- TODO - Replace with new screenshot of site-->
-					<img src="./assets/projects/TicketRebel.jpeg" class="projects-item-picture" alt=""/>
+					<img src="assets/projects/Ticketrebel/image.png" class="projects-item-picture" alt="A screenshot of the Ticketrebel website, showing a work-in-progress concert page."/>
 					<div class="projects-item-text">
 						I am currently devloping a concert ticketing website, focused on local, small-scale events, with
 						emphasis on concerts.
 						<br/>
+						Ticketrebel is currently a two-man team consisting of myself, as a full-stack developer,
+						and A.J., as a database-focused backend developer.
 						<br/>
-						Technologies used include:
 						<br/>
-						<a href="https://www.npmjs.com/package/react">React</a> and
+						Made in <a href="https://www.npmjs.com/package/react">React</a> as a (presently) web-only service, using
+						<br/>
 						<a href="https://www.npmjs.com/package/mui">Material UI</a> for UI/UX,
 						<br/>
-						<a href="https://www.npmjs.com/package/koa">Koa</a> for data routing,
+						<a href="https://www.npmjs.com/package/koa">Koa</a> for content routing,
 						<br/>
 						<a href="https://www.npmjs.com/package/ajv">AJV</a> for data validation,
 						<br/>
@@ -118,10 +132,11 @@
 		<div class="projects-item-outside-container">
 			<div class="projects-item-middle-container">
 				<div class="projects-item-header">
-					Last Minute Massage (2021-2023)
+					<div class="projects-item-header-text">Last Minute Massage</div>
+					<div class="projects-item-header-text">[ 2021-2023 ]</div>
 				</div>
 				<div class="projects-item-inside-container">
-					<img src="./assets/projects/LastMinuteMassage.png" class="projects-item-picture"/>
+					<img src="assets/projects/LastMinuteMassage/image.png" class="projects-item-picture" alt="A screenshot of the LastMinuteMassage page, showing a Google Maps interface overlayed with text boxes containing information about massage parlors and their services."/>
 					<div
 						style="display: flex; width: 100%; height: 100%; justify-content: space-between; flex-direction: column">
 						<div class="projects-item-text">
@@ -144,67 +159,66 @@
 	<!-- Projects END -->
 
 	<!-- Photography START -->
-	<!--
-	    TODO: style scrollbar to fit site theme
-	 -->
-	<div class="section-header" id="photography">photography</div>
+	<div class="section-header" id="photography">
+		photography
+	</div>
 	<div class="photography-outer-container" style="margin-bottom: 0.25rem">
 		<div class="photography-inner-container">
 			<div class="photography-column">
-				<img src="assets/photos/vertical/aurora-1.jpeg"/>
-				<img src="assets/photos/horizontal/cat-1.jpeg"/>
+				<img src="assets/photography/vertical/aurora-1.jpeg" alt="A photograph of a lake and mountaings at night, cast with red, orange, yellow, green and blue from an aurora and a light leak."/>
+				<img src="assets/photography/horizontal/cat-1.jpeg" alt="A picture of a black and brown cat lying on a green carpet under a slice of sunlight."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/film-on-rainy-window.jpeg"/>
-				<img src="assets/photos/vertical/autumn-house.jpeg"/>
+				<img src="assets/photography/horizontal/film-on-rainy-window.jpeg" alt="A double exposure of the view behind a rain-covered window and boxes of film rolls."/>
+				<img src="assets/photography/vertical/autumn-house.jpeg" alt="A red house surrounded by green shrubbery in Autumn. A nearly-bare tree stands in front of it, with it's fallen leaves covering the ground."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/vertical/balconies-1.jpeg"/>
-				<img src="assets/photos/horizontal/foggy-streetlights.jpeg"/>
+				<img src="assets/photography/vertical/balconies-1.jpeg" alt="A set of apartment balconies covered in heavy sunlight."/>
+				<img src="assets/photography/horizontal/foggy-highway.jpeg" alt="A night-time long-exposure overlooking a road and the highway behind it. A heavy fog covers the whole scene, causing the the light to scatter. The faint lights of buildings can be seen further in the distance."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/fogy-streetlight-1.jpeg"/>
-				<img src="assets/photos/vertical/balconies-3.jpeg"/>
+				<img src="assets/photography/horizontal/foggy-streetlight.jpeg" alt="A single streetlight is visible in an otherwise-dark street, with car and tree silhouettes barely visible. The light form the streetlight is green and heavily scattered."/>
+				<img src="assets/photography/vertical/balconies-3.jpeg" alt="An apartment building's balconies are lit by evening light, framed behind powerlines and tree branches."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/vertical/banconies-2.jpeg"/>
-				<img src="assets/photos/horizontal/horse.jpeg"/>
+				<img src="assets/photography/vertical/banconies-2.jpeg" alt="A set of curved apartment balconies are are lit by sunset light, with faint clouds visible in an otherwise-empty blue sky in the background."/>
+				<img src="assets/photography/horizontal/horse.jpeg" alt="A close-up of a brown horse eating grass in a field. Only the horse's head and front-left leg are visible."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/leaves-2.jpeg"/>
-				<img src="assets/photos/vertical/cat-in-tree.jpeg"/>
+				<img src="assets/photography/horizontal/leaves-2.jpeg" alt="Red and green leaves extending from the bottom to halfway up the image, with a completely empty blue sky in the background."/>
+				<img src="assets/photography/vertical/cat-in-tree.jpeg" alt="An orange cat, being held by a faceless pair of hands and wearing a blue harness, is being lifted up onto a tree, whose bare trunk and branches are visible. The scene is tinted orange from sunset light."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/vertical/diner.jpeg"/>
-				<img src="assets/photos/horizontal/snowy-bridge-at-night.jpeg"/>
+				<img src="assets/photography/vertical/diner.jpeg" alt="An night-time interior shot of a diner from behind a table, showing patrons and workers going about their business. The diner is visibly retro-styled, and is full of orange and red neon lights."/>
+				<img src="assets/photography/horizontal/snowy-bridge-at-night.jpeg" alt="A night-time shot of an empty four-lane bridge in a snowstor, viewed from the the side of the road facing towards the center. The pillars and aircraft warning lights of another bridge are barely visible in the background."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/snowy-field.jpeg"/>
-				<img src="assets/photos/vertical/granville.jpeg"/>
+				<img src="assets/photography/horizontal/snowy-field.jpeg" alt="A night-time shot of an empty, snow-covered soccer field. It is lit by a single red light. Trees and an empty blue-gray sky make up the background. "/>
+				<img src="assets/photography/vertical/granville.jpeg" alt="A photograph of Granville Street, in Vancouver, B.C., facing into the sun. The photo is taken from above head-level, showing a crowd, bus and the many signs populating the street during it's evening hours."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/vertical/leaves-1.jpeg"/>
-				<img src="assets/photos/horizontal/snowy-night-alley.jpeg"/>
+				<img src="assets/photography/vertical/leaves-1.jpeg" alt="A photo of an arch, with green leaves drooping down from the top. A garden, with more arches, is visible in the background."/>
+				<img src="assets/photography/horizontal/snowy-night-alley.jpeg" alt="A night-time shot of a snow-covered alley, with cars parked on the side of the road. The scene is light by two red garage lights."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/snowy-overpass-1.jpeg"/>
-				<img src="assets/photos/vertical/neon-sign.jpeg"/>
+				<img src="assets/photography/horizontal/snowy-overpass-1.jpeg" alt="A night-time shot of a snowy highway overpass, crossing over to a bridge. There is another bridge visible in the background."/>
+				<img src="assets/photography/vertical/neon-sign.jpeg" alt="A night-time shot of a red and green neon 'OPEN' sign lighting up the entrance to a restaurant."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/vertical/palm-trees.jpeg"/>
-				<img src="assets/photos/horizontal/spiderweb-on-dead-plant.jpeg"/>
+				<img src="assets/photography/vertical/palm-trees.jpeg" alt="A photo of a tall palm tree with a ladder attached to it, looking up at it from the ground. The tops of other palm trees are visible in the corners of the photo. The background is a slightly cloudy blue sky."/>
+				<img src="assets/photography/horizontal/spiderweb-on-dead-plant.jpeg" alt="A photo of spiderwebs hanging from the branches of a dying flower. The background is composed of blurry light-brown plant stalks."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/sunset-and-balconies.jpeg"/>
-				<img src="assets/photos/vertical/pool-and-balconies.jpeg"/>
+				<img src="assets/photography/horizontal/sunset-and-balconies.jpeg" alt="A dramatic cloudy evening sky, covered from top-down in a blue-to-orange gradient. The clouds are heavily cast in orange by the sunset's light, and are visibly textured. The scene is framed by the dark silhouettes of apartment balconies and the city below."/>
+				<img src="assets/photography/vertical/pool-and-balconies.jpeg" alt="An sunset shot of a pool, with balconies and a gazebo behind it. Wispy clouds cover the sky in the background."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/tail-light-trails-horizontal.jpeg"/>
-				<img src="assets/photos/vertical/regis-hotel.jpeg"/>
+				<img src="assets/photography/horizontal/tail-light-trails-horizontal.jpeg" alt="A night-time long-exposure of tail- and head-light trails on a highway, viewed from the height of another highway overpass. Powerlines and nearby buildings can be seen in the background."/>
+				<img src="assets/photography/vertical/regis-hotel.jpeg" alt="A nighttime photo of the Regis Hotel and surrounding street in Vancouver, B.C., showing traffic and nearby buildings."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photos/horizontal/trainyard.jpeg"/>
-				<img src="assets/photos/vertical/seagulls.jpeg"/>
+				<img src="assets/photography/horizontal/trainyard.jpeg" alt="A night-time photo of an inactive train yard, lit up by red lights. The scene is viewed from high above, looking down. A bare tree's silhouette is visible in the center of the foreground."/>
+				<img src="assets/photography/vertical/seagulls.jpeg" alt="A group of seagulls resting and flying around on mossy cliff face. Behind them is the ocean, with visible ripples in the waves."/>
 			</div>
 		</div>
 	</div>
@@ -212,10 +226,10 @@
 
 	<!-- Footer START -->
 	<div class="footer">
-		<img src="./assets/interface/backgrounds/footerBanner.png" class="footer-image"
+		<img src="./assets/interface/backgrounds/footer-banner.png" class="footer-image"
 		     alt="An abstract, blue-colored decorative footer banner image."/>
 		<div class="footer-content">
-			<div>(c) anton p. 2024 - 2025</div>
+			<div>(c) anton p. <span onclick="this.innerHTML = 'approx. 13.7 × 10<sup>10</sup> B.C. - the end of time'">2024 - 2025</span></div>
 			<div>
 				<a href="https://github.com/anton-pan">github</a> |
 				<a href="mailto:anton_panfilenok@sfu.ca">email</a> |
@@ -233,5 +247,7 @@
 </html>
 <!--
 	Credits:
-	TODO - write credits for free/spen-source assets used
+	Plavsky *Modified* (Logotype):    https://www.dafont.com/plavsky.font
+	160MKSDAL Font     (Header Text): https://fontsgeek.com/160mksdal-font
+	Y2K Assets Pack    (Clip Art):    https://codyvondell.com/
 -->
