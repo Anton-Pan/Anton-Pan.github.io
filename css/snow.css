@@ -20,7 +20,7 @@
 	filter:         blur(1px);
 }
 
-.snow-container-full {
+.snow-container-fullscreen {
 	z-index:        1;
 	pointer-events: none;
 	width:          100%;

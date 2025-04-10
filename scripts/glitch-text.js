@@ -1,3 +1,4 @@
+"use strict";
 const getRandomInt = (min, max) => {
     return parseFloat((Math.random() * (max - min) + min).toPrecision(2));
 }

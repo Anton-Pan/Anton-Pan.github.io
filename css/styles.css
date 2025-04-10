@@ -5,36 +5,35 @@
 
 :root {
 	/* Color Scheme */
-	--CustomBlack:               rgb(20, 20, 20);
-	--CustomDarkBlue:            rgb(37, 57, 87);
-	--CustomBlue:                rgb(33, 72, 99);
-	--CustomTeal:                rgb(21, 88, 120);
-	--CustomGray:                rgb(112, 114, 115);
-	--CustomLightGray:           rgb(195, 196, 196);
+	--Custom-Black:         rgb(20, 20, 20);
+	--Custom-Dark-Blue:     rgb(37, 57, 87);
+	--Custom-Blue:          rgb(33, 72, 99);
+	--Custom-Teal:          rgb(21, 88, 120);
+	--Custom-Gray:          rgb(112, 114, 115);
+	--Custom-Light-Gray:    rgb(195, 196, 196);
 	/* Interface Colors */
-	--CustomContainerBackground: rgb(142, 156, 179);
-	--CustomTextColor:           rgb(182, 198, 224);
-	--CustomBackgroundTop:       rgb(56, 71, 103);
-	--CustomBackgroundBottom:    rgb(35, 47, 68);
+	--Container-Background: rgb(142, 156, 179);
+	--Text:                 rgb(182, 198, 224);
+	--Background-Light:     rgb(56, 71, 103);
+	--Background-Dark:      rgb(35, 47, 68);
 	/* Button Colors */
-	--Button-Dark:               rgb(37, 57, 87);
-	--Button-Light:              rgb(56, 71, 103);
-	--Button-Hover-Dark:         rgb(168, 138, 88);
-	--Button-Hover-Light:        rgb(187, 152, 104);
+	--Button-Dark:          rgb(37, 57, 87);
+	--Button-Light:         rgb(56, 71, 103);
+	--Button-Hover-Dark:    rgb(168, 138, 88);
+	--Button-Hover-Light:   rgb(187, 152, 104);
 	/* Everything Else */
-	min-height:                  100vh;
-	min-width:                   99vw;
-	margin:                      0;
-	background:                  linear-gradient(var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%) fixed;
-	z-index:                     2;
-	scroll-behavior:             smooth;
+	min-height:             100vh;
+	min-width:              99vw;
+	margin:                 0;
+	background:             linear-gradient(var(--Background-Light) 0%, var(--Background-Dark) 100%) fixed;
+	z-index:                2;
+	scroll-behavior:        smooth;
 }
 
 * {
 	box-sizing: border-box;
-	color:      var(--CustomTextColor);
+	color:      var(--Text);
 }
-
 
 body {
 	margin:          0;
@@ -42,17 +41,17 @@ body {
 	justify-content: center;
 	align-items:     center;
 	font-family:     Calibri, sans-serif, monospace;
-	color:           var(--CustomTextColor);
+	color:           var(--Text);
 }
 
 .side-text-left {
 	/* left-only */
 	background:              -webkit-linear-gradient(
-			                         var(--CustomBackgroundTop),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomBackgroundBottom));
+			                         var(--Background-Light),
+			                         var(--Container-Background),
+			                         var(--Container-Background),
+			                         var(--Container-Background),
+			                         var(--Background-Dark));
 	left:                    0;
 	padding-left:            0.5vw;
 	/* duplicate */
@@ -74,11 +73,11 @@ body {
 .side-text-right {
 	/* right-only */
 	background:              -webkit-linear-gradient(
-			                         var(--CustomBackgroundBottom),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomContainerBackground),
-			                         var(--CustomBackgroundTop)
+			                         var(--Background-Dark),
+			                         var(--Container-Background),
+			                         var(--Container-Background),
+			                         var(--Container-Background),
+			                         var(--Background-Light)
 	                         );
 	right:                   0;
 	padding-right:           0.5vw;
@@ -108,12 +107,14 @@ body {
 
 	width:                        50%;
 	min-height:                   100vh;
-	background-color:             var(--CustomContainerBackground);
+	background-color:             var(--Container-Background);
 	display:                      flex;
 	flex-direction:               column;
 	justify-content:              flex-start;
 	align-items:                  center;
 	padding:                      0.5rem;
+	border-radius:                calc(1rem / 3);
+	margin:                       0.25rem 0rem;
 }
 
 @media (min-width: 1920px) or (orientation: landscape) {
@@ -147,8 +148,9 @@ body {
 }
 
 img {
-	border: 1px solid var(--CustomContainerBackground);
-	width:  100%;
+	border:        calc(5px / 3) solid var(--Container-Background);
+	width:         100%;
+	border-radius: calc(1rem / 3);
 }
 
 button {
@@ -165,6 +167,48 @@ button {
 	width:           100%;
 }
 
+.feature-toggle-button-enabled {
+	min-height:       2rem;
+	background-color: var(--Container-Background);
+	border:           0.1rem solid var(--Container-Background);
+	border-radius:    calc(1rem / 3);
+	transition:       color 250ms, background-color 500ms;
+}
+
+.feature-toggle-button-enabled:hover {
+	color:      var(--Custom-Dark-Blue);
+	transition: color 250ms, background-color 500ms;
+}
+
+.feature-toggle-button-enabled:hover::before {
+	content: "";
+}
+
+.feature-toggle-button-enabled:hover::after {
+	content: "";
+}
+
+.feature-toggle-button-disabled {
+	min-height:       2rem;
+	background-color: transparent;
+	border:           0.1rem solid var(--Container-Background);
+	border-radius:    calc(1rem / 3);
+	transition:       color 250ms, background-color 500ms;
+}
+
+.feature-toggle-button-disabled:hover {
+	color:      var(--Container-Background);
+	transition: color 250ms, background-color 500ms;
+}
+
+.feature-toggle-button-disabled:hover::before {
+	content: "";
+}
+
+.feature-toggle-button-disabled:hover::after {
+	content: "";
+}
+
 .logotype {
 	margin-top:    2.25rem;
 	margin-bottom: 2.25rem;
@@ -172,7 +216,13 @@ button {
 }
 
 .banner-photo {
-	visibility: visible;
+	margin-bottom: 0.25rem;
+	border-radius: calc(1rem / 3);
+}
+
+.decoration-photo {
+	display:       block;
+	border-radius: calc(1rem / 3);
 }
 
 @media (orientation: landscape) {
@@ -206,9 +256,21 @@ button {
 	align-items:      center;
 	width:            100%;
 	padding:          0.25rem 0rem;
-	background-color: var(--CustomContainerBackground);
+	background-color: var(--Container-Background);
 	position:         sticky;
 	top:              0;
+}
+
+@media (orientation: landscape) {
+	.navbar-outer-container {
+		display: flex;
+	}
+}
+
+@media (orientation: portrait) {
+	.navbar-outer-container {
+		display: none;
+	}
 }
 
 .navbar-inner-container {
@@ -216,23 +278,12 @@ button {
 	justify-content:  space-between;
 	align-items:      center;
 	width:            100%;
-	background-color: var(--CustomDarkBlue);
+	background-color: var(--Custom-Dark-Blue);
 	position:         sticky;
 	padding:          0.5rem;
 	top:              0;
 	gap:              0.5rem;
-}
-
-@media (orientation: landscape) {
-	.navbar-inner-container {
-		flex-direction: row;
-	}
-}
-
-@media (orientation: portrait) {
-	.navbar-inner-container {
-		flex-direction: column;
-	}
+	border-radius:    calc(1rem / 3);
 }
 
 .navbar-header-text {
@@ -258,12 +309,12 @@ button {
 
 .navbar-button {
 	border:           solid black 1px;
-	background-color: var(--CustomBlack);
+	background-color: var(--Custom-Black);
 	z-index:          1;
 	position:         relative;
 	flex:             1;
 	min-height:       2rem;
-	border-radius:    0.5rem;
+	border-radius:    calc(1rem / 3);
 	overflow:         hidden;
 }
 
@@ -359,16 +410,26 @@ button:hover .navbar-button-gradient {
 	font-family:       "160MKSDAL", sans-serif;
 	text-transform:    lowercase;
 	scroll-margin-top: 1.75rem;
-	background:        linear-gradient(-90deg, var(--CustomBackgroundTop) 0%, var(--CustomBackgroundBottom) 100%);
+	background:        linear-gradient(-90deg, var(--Background-Light) 0%, var(--Background-Dark) 100%);
 	padding:           0.25rem 0rem 0.25rem 0.5rem;
 	margin-bottom:     0.25rem;
+	border-radius:     calc(1rem / 3);
 }
 
 .section-header::before {
 	content: "// ";
 }
 
-sup { vertical-align: top; font-size: 0.6em; }
+hr {
+	height:     0.1rem;
+	border:     none;
+	background: var(--Container-Background);
+}
+
+sup {
+	vertical-align: top;
+	font-size:      0.75em;
+}
 
 .footer {
 	font-family: "160MKSDAL", sans-serif;
@@ -385,12 +446,111 @@ sup { vertical-align: top; font-size: 0.6em; }
 .footer-content {
 	position:        absolute;
 	bottom:          0;
-	padding:         0.25rem;
+	padding:         0 0.5rem 0.25rem 0.5rem;
 	text-transform:  lowercase;
-	color:           var(--CustomTextColor);
+	color:           var(--Text);
 	left:            50%;
 	transform:       translateX(-50%);
 	display:         flex;
 	justify-content: space-between;
 	width:           100%;
 }
+
+
+/* https://aleclownes.com/2017/02/01/crt-display.html
+@keyframes flicker {
+	0% {
+		opacity: 0.27861;
+	}
+	5% {
+		opacity: 0.34769;
+	}
+	10% {
+		opacity: 0.23604;
+	}
+	15% {
+		opacity: 0.90626;
+	}
+	20% {
+		opacity: 0.18128;
+	}
+	25% {
+		opacity: 0.83891;
+	}
+	30% {
+		opacity: 0.65583;
+	}
+	35% {
+		opacity: 0.67807;
+	}
+	40% {
+		opacity: 0.26559;
+	}
+	45% {
+		opacity: 0.84693;
+	}
+	50% {
+		opacity: 0.96019;
+	}
+	55% {
+		opacity: 0.08594;
+	}
+	60% {
+		opacity: 0.20313;
+	}
+	65% {
+		opacity: 0.71988;
+	}
+	70% {
+		opacity: 0.53455;
+	}
+	75% {
+		opacity: 0.37288;
+	}
+	80% {
+		opacity: 0.71428;
+	}
+	85% {
+		opacity: 0.70419;
+	}
+	90% {
+		opacity: 0.7003;
+	}
+	95% {
+		opacity: 0.36108;
+	}
+	100% {
+		opacity: 0.24387;
+	}
+}
+
+.hover::after {
+	content:        " ";
+	display:        block;
+	position:       absolute;
+	top:            0;
+	left:           0;
+	bottom:         0;
+	right:          0;
+	background:     rgba(18, 16, 16, 0.1);
+	opacity:        0;
+	z-index:        2;
+	pointer-events: none;
+	animation:      flicker 0.6s infinite;
+}
+
+.hover::before {
+	content:         " ";
+	display:         block;
+	position:        absolute;
+	top:             0;
+	left:            0;
+	bottom:          0;
+	right:           0;
+	background:      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+	z-index:         2;
+	background-size: 100% 4px, 5px 100%;
+	pointer-events:  none;
+	animation:       flicker 0.7s infinite;
+}
+ */

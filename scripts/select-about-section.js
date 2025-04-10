@@ -1,3 +1,4 @@
+"use strict";
 const unselectedClass = "about-navigation-button-unselected"
 const selectedClass = "about-navigation-button-selected"
 const aboutMeID = "about-me-button"

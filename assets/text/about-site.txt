@@ -1,22 +1,19 @@
-This site is heavily inspired by websites from the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>, and by the aesthetics of the
+The aesthetic is heavily inspired by the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>, and by the aesthetics of the
 <a href="https://www.youtube.com/watch?v=b06pKMxF6h8">Vir</a><a href="https://www.youtube.com/watch?v=HPc8QMycGno">tua</a><a href="https://www.youtube.com/watch?v=e7QeR0VxnlA">l S</a><a href="https://www.youtube.com/watch?v=zdLhJ9lB5x0">elf</a>
 musical project.
-<br>
-I chose it due to its uniqueness and recognizability - even those who didn't grow up on those Adobe Flash-based sites will
-immediately catch it's sharp angles, metallic sheen and techno-futurism.
-<br>
-The inspiration isn't just surface-level - those who grew up browsing Angelfire and Geocities sites will recognize the
-<a href="https://en.wikipedia.org/wiki/Matrix_digital_rain">Matrix</a>/<a href="https://lain.wiki/images/e/ee/Metaphorlize.jpg">Lain</a>
--like scrolling text, and the ever-ubiquitous snow that covered the web every December in 200X.
-<br>
-However, this approach isn't just an exercise in creativity - there exists a practical side to it, too.
-<br>
-Just like students learn their country's history in school, I believe that developers have a duty to learn about the
-past of their world - in order to truly understand current trends and technologies, we must educate ourselves about
-those of the past, and learn from their successes and failures. <br>
-<br>
-<div class="marquee-container">
-    <div class="marquee-text">
-        Anyone remember the &lt;marquee&gt; tag?
-    </div>
-</div>
+<br/>
+<br/>
+I've hand-written <b>all</b> the code for this site.
+<br/>
+No libraries or frameworks. Just pure HTML, CSS and JavaScript.
+<br/>
+I have two reasons for this choice:
+<br/>
+The first is <b>learning</b>: I consider this site to be, in addition to a portfolio, a learning experience.
+Having spent so much time maximizing efficiency through libraries and frameworks, I decided to go back to the basics and learn from the ground up
+to strengthen my foundational knowledge.
+<br/>
+The second is <b>limit-testing</b>: I want to see just how far I can push my skills and creativity without using any frameworks, libraries, or copied code.
+<br/>
+For example, the falling snow is just multiple CSS animations that transition between two random points at the top and bottom of the screen,
+which are randomly regenerated with every loop completion.
