@@ -15,7 +15,7 @@
 	<script src="./scripts/log-credits.js"></script>
 	<script src="./scripts/helper-scripts.js"></script>
 	<script src="./scripts/select-about-section.js"></script>
-	<script> </script>
+	<script></script>
 </head>
 <body>
 <div class="snow-container-fullscreen" id="snow-container-fullscreen"></div>
@@ -41,17 +41,21 @@
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Photography</div>
 			</button>
-			<button class="navbar-button" onclick="navigateTo('/resume')">
-				<div class="navbar-button-gradient"></div>
-				<div class="navbar-button-text">Resume</div>
-			</button>
+			<a href="./assets/Anton%20Panfilenok%20Resume.pdf" download
+			   style="flex:1; min-height:2rem; text-decoration: none">
+				<button class="navbar-button">
+					<div class="navbar-button-gradient"></div>
+					<div class="navbar-button-text">Resume</div>
+				</button>
+			</a>
 			<button class="navbar-button"
 			        onclick="window.open('https://github.com/Anton-Pan')">
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Github</div>
 			</button>
 			<div style="display: flex; flex-direction: column; gap: 0.25rem">
-				<button class="feature-toggle-button-disabled" id="snow-controller" title="WARNING:  V E R Y  L A G G Y">
+				<button class="feature-toggle-button-disabled" id="snow-controller"
+				        title="WARNING: Very laggy when run in conjunction with the background text.">
 					Snow
 				</button>
 			</div>
@@ -240,15 +244,15 @@
 			</div>
 			<div class="photography-column">
 				<img src="assets/photography/horizontal/sunset-and-balconies.jpeg"
-				     alt="A dramatic cloudy evening sky, covered from top-down in a blue-to-orange gradient. The clouds are heavily cast in orange by the sunset's light, and are visibly textured. The scene is framed by the dark silhouettes of apartment balconies and the city below."/>
+				     alt="A cloudy evening sky, covered from top-down in a blue-to-orange gradient. The clouds are heavily cast in orange by the sunset's light, and are visibly textured. The scene is framed by the dark silhouettes of apartment balconies and the city below."/>
 				<img src="assets/photography/vertical/pool-and-balconies.jpeg"
-				     alt="An sunset shot of a pool, with balconies and a gazebo behind it. Wispy clouds cover the sky in the background."/>
+				     alt="An sunset shot of a pool, with balconies and a gazebo behind it. Clouds cover the sky in the background."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/tail-light-trails-horizontal.jpeg"
-				     alt="A night-time long-exposure of tail- and head-light trails on a highway, viewed from the height of another highway overpass. Powerlines and nearby buildings can be seen in the background."/>
 				<img src="assets/photography/vertical/regis-hotel.jpeg"
 				     alt="A nighttime photo of the Regis Hotel and surrounding street in Vancouver, B.C., showing traffic and nearby buildings."/>
+				<img src="assets/photography/horizontal/tail-light-trails-horizontal.jpeg"
+				     alt="A night-time long-exposure of tail- and head-light trails on a highway, viewed from the height of another highway overpass. Powerlines and nearby buildings can be seen in the background."/>
 			</div>
 			<div class="photography-column">
 				<img src="assets/photography/horizontal/trainyard.jpeg"

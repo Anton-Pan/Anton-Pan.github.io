@@ -1,16 +1,17 @@
 Hi! I'm Anton - the developer of this site!
 <br/>
-I'm a third-year CompSci student at Simon Fraser University in Vancouver, B.C., though I've been working as a full-stack React web developer since 2021.
+I'm a third-year CompSci student at Simon Fraser University in Vancouver, B.C., and I've been working as a full-stack React web developer since 2021.
 <br/>
 In addition to studying at SFU, I'm a member of <a href="https://sfusurge.com/">SFU Surge</a>, one of SFU's top tech-focused student organisations,
-where I have held the positions of photographer/videographer and social media executive since September 2024.
+as a photographer/videographer, social media executive and external relations coordinator since September 2024.
 <br/>
 <br/>
 My current focus, and largest project to-date, is TicketRebel - an event ticketing website designed for small-scale events, such as block parties and underground music shows.
 At the moment, myself and the two other members of the project are doing market research, and designing the API and database models.
+I currently have some smaller projects ongoing, such as a Roomba clone, which will be posted when it exits the planning stage.
 <br/>
 <br/>
-I spend my free time tinkering with old tech, taking photos (scroll to the bottom to see them!), keeping my car running and
+I spend my free time tinkering with old tech, taking photos, working on cars and
 <a href="https://www.youtube.com/watch?v=IHEZEoCKvgE" title="Sunlounger ft. Zara - Lost (Will Atkinson Remix)">listening</a>
 <a href="https://www.youtube.com/watch?v=zdLhJ9lB5x0" title="Virtual Self - Key">to</a>
 <a href="https://www.youtube.com/watch?v=jaE4Mpjmkh4" title="Fall Out Boy - Nobody Puts Baby In The Corner">music</a>.

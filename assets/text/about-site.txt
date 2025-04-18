@@ -15,5 +15,5 @@ to strengthen my foundational knowledge.
 <br/>
 The second is <b>limit-testing</b>: I want to see just how far I can push my skills and creativity without using any frameworks, libraries, or copied code.
 <br/>
-For example, the falling snow is just multiple CSS animations that transition between two random points at the top and bottom of the screen,
-which are randomly regenerated with every loop completion.
+For example; the falling snow is just multiple CSS animations that transition between two random points at the top and bottom of the screen,
+which are randomly regenerated with every individual animation completion.
