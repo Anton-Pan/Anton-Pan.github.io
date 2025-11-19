@@ -15,6 +15,8 @@
 	<script src="./scripts/log-credits.js"></script>
 	<script src="./scripts/helper-scripts.js"></script>
 	<script src="./scripts/select-about-section.js"></script>
+	<script src="./scripts/set-last-update-date.js"></script>
+
 	<script></script>
 </head>
 <body>
@@ -117,7 +119,7 @@
 						<br/>
 						<a href="https://www.npmjs.com/package/react">React</a>,
 						<br/>
-						<a href="https://mui.com/">Material-UI (MUI)</a> for UI components,
+						<a href="https://mui.com/">Material UI</a> for UI/UX,
 						<br/>
 						<a href="https://github.com/vasturiano/react-globe.gl">react-globe.gl</a> for 3D globe
 						visualization,
@@ -145,9 +147,9 @@
 			</div>
 			<div class="project-content-container">
 				<img src="assets/project-images/Geofitti.jpg" class="project-image"
-				     alt="A screenshot of the Geofitti website, showing a map with a navigation UI."/>
+				     alt="A screenshot of the Geofitti website, showing a map with a navigation user interface."/>
 				<div class="project-text">
-					Geofitti is a Geospatial Information System (GIS) web app that allows users to pin content
+					Geofitti is a WIP GIS web app that allows users to pin content
 					(user-drawn SVG art, text-based notes or reviews, etc.) onto an interactive map of Earth,
 					featuring 'like'-count leaderboards, limited-lifetime content pins, and crowdsourced moderation.
 					<br/>
@@ -155,6 +157,7 @@
 					on-screen, in-app drawing, and planning data-storage strategies.
 					<hr/>
 					Made using:
+					<br/>
 					<a href="https://geoserver.org/">GeoServer</a> for map tile serving.
 					<br/>
 					<a href="https://www.postgresql.org/">PostGIS</a> for geospatial data storage.
@@ -164,7 +167,7 @@
 					<a href="https://www.npmjs.com/package/koa">Koa</a> for proxying the map tile server and serving
 					assets, and
 					<br/>
-					<a href="https://www.npmjs.com/package/@mui/material">Material UI</a> for UI/UX,
+					<a href="https://www.npmjs.com/package/@mui/material">Material UI</a> for UI/UX.
 					<br/>
 				</div>
 			</div>
@@ -179,7 +182,7 @@
 				<img src="assets/project-images/TicketRebel.jpg" class="project-image"
 				     alt="A screenshot of the Ticketrebel website, showing a work-in-progress concert page."/>
 				<div class="project-text">
-					TicketRebel is a concert ticketing website, focused on local, small-scale events, with
+					TicketRebel is a WIP concert ticketing web app focused on local, small-scale events, with
 					emphasis on concerts.
 					<br/>
 					Unique features will include instant payment to event organizers upon ticket purchase, and
@@ -342,7 +345,7 @@
 		<div class="footer-content">
 			<!-- Setting (line-height: 1) fixes <sup> changing the line heihgt -->
 			<div id="copyrightText" style="line-height: 1" onclick="swapCopyrightText()">(c) anton p. 2024 - 2025</div>
-			<div>Last update: November 1st, 2025</div>
+			<div id="lastUpdateDate">loading...</div>
 			<div>
 				<a href="https://github.com/anton-pan">github</a> |
 				<a href="mailto:anton_panfilenok@sfu.ca">email</a> |

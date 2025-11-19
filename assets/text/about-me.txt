@@ -3,7 +3,7 @@ Hi! I'm Anton - the developer of this site!
 I'm a third-year CompSci student at Simon Fraser University in Vancouver, B.C., and I've been working as a full-stack React web developer since 2021.
 <br/>
 In addition to studying at SFU, I'm a member of <a href="https://sfusurge.com/">SFU Surge</a>, one of SFU's top tech-focused student organisations,
-as a photographer/videographer, social media executive and external relations coordinator since September 2024.
+as a Photographer and External Eelations Coordinator since September 2024.
 <br/>
 <br/>
 My current focus, and largest project to-date, is TicketRebel - an event ticketing website designed for small-scale events, such as block parties and underground music shows.
