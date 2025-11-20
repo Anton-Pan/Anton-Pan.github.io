@@ -116,11 +116,11 @@ const snow = () => {
     const bindToController = () => {
         const controller = document.getElementById(config.controllerId);
         controller.addEventListener("click", function () {
-            if (controller.className === "feature-toggle-button-enabled") {
-                controller.className = "feature-toggle-button-disabled";
+            if (controller.classList.contains("enabled")) {
+                controller.classList.remove("enabled");
                 stopSnowflakes();
             } else {
-                controller.className = "feature-toggle-button-enabled";
+                controller.classList.add("enabled");
                 startSnowflakes();
             }
         });

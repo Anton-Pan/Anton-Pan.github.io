@@ -13,7 +13,6 @@ const setLastUpdateDate = async () => {
             return res.json();
         })
         .then(data => {
-                console.log(data);
                 const lastUpdateDate = new Date(data.updated_at); // eg: "2025-11-19T08:48:04Z"
                 if (!textDiv || !lastUpdateDate) {
                     return;

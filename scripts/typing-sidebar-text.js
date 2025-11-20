@@ -11,19 +11,6 @@ const typingSidebarText = async (aestheticTextArray) => {
         maxLinesOnScreen: 54
     }
 
-    // const bindToController = () => {
-    //     const controller = document.getElementById(config.controllerId);
-    //     controller.addEventListener("click", function () {
-    //         if (controller.className === "feature-toggle-button-enabled") {
-    //             controller.className = "feature-toggle-button-disabled";
-    //             // Turn feature on
-    //         } else {
-    //             controller.className = "feature-toggle-button-enabled";
-    //             // Turn feature off
-    //         }
-    //     });
-    // }
-
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
     const allContainersAreValid = (containers) => {

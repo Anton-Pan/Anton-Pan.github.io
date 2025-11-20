@@ -167,28 +167,7 @@ button {
 	width:           100%;
 }
 
-.feature-toggle-button-enabled {
-	min-height:       2rem;
-	background-color: var(--Container-Background);
-	border:           0.1rem solid var(--Container-Background);
-	border-radius:    calc(1rem / 3);
-	transition:       color 250ms, background-color 500ms;
-}
-
-.feature-toggle-button-enabled:hover {
-	color:      var(--Custom-Dark-Blue);
-	transition: color 250ms, background-color 500ms;
-}
-
-.feature-toggle-button-enabled:hover::before {
-	content: "";
-}
-
-.feature-toggle-button-enabled:hover::after {
-	content: "";
-}
-
-.feature-toggle-button-disabled {
+.feature-toggle-button {
 	min-height:       2rem;
 	background-color: transparent;
 	border:           0.1rem solid var(--Container-Background);
@@ -196,17 +175,26 @@ button {
 	transition:       color 250ms, background-color 500ms;
 }
 
-.feature-toggle-button-disabled:hover {
-	color:      var(--Container-Background);
+.feature-toggle-button:hover {
+	color: var(--Container-Background);
+}
+
+.feature-toggle-button:hover::before {
+	content: "";
+}
+
+.feature-toggle-button:hover::after {
+	content: "";
+}
+
+.feature-toggle-button.enabled {
+	background-color: var(--Container-Background);
+	border:           0.1rem solid var(--Container-Background);
+}
+
+.feature-toggle-button.enabled:hover {
+	color:      var(--Custom-Dark-Blue);
 	transition: color 250ms, background-color 500ms;
-}
-
-.feature-toggle-button-disabled:hover::before {
-	content: "";
-}
-
-.feature-toggle-button-disabled:hover::after {
-	content: "";
 }
 
 .logotype {
