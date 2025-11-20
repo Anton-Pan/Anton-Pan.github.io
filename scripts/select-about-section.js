@@ -13,18 +13,18 @@ const loadTextFromFile = async (url) => {
     return res.text();
 };
 
-const selectAboutSection = async (targetId) => {
+const selectAboutSection = async (callerID) => {
     const aboutMeButton = document.getElementById(aboutMeID);
     const aboutSiteButton = document.getElementById(aboutSiteID);
     const aboutTextContainer = document.getElementById(textContainerID);
     const aboutMeText = await loadTextFromFile("../assets/text/about-me.txt")
     const aboutSiteText = await loadTextFromFile("../assets/text/about-site.txt")
-    if (targetId === aboutMeID) {
+    if (callerID === aboutMeID) {
         aboutTextContainer.innerHTML = aboutMeText;
         aboutMeButton.className = selectedClass;
         aboutSiteButton.className = unselectedClass;
     }
-    if (targetId === aboutSiteID) {
+    if (callerID === aboutSiteID) {
         aboutTextContainer.innerHTML = aboutSiteText;
         aboutMeButton.className = unselectedClass;
         aboutSiteButton.className = selectedClass;

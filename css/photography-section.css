@@ -6,6 +6,48 @@
 	border-radius: calc(1rem / 3);
 }
 
+.photography-navigation {
+	width:                 100%;
+	height:                2rem;
+	display:               grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding-bottom:        0.5rem;
+}
+
+.photography-navigation-divider {
+	background: linear-gradient(90deg, rgb(56, 71, 103) 25%, rgb(142, 156, 179) 100%);
+}
+
+.photography-navigation-divider.flipped {
+	background: linear-gradient(270deg, rgb(56, 71, 103) 25%, rgb(142, 156, 179) 100%);
+}
+
+.photography-navigation-button {
+	flex:             1;
+	background-color: transparent;
+}
+
+.photography-navigation-button.selected {
+	background-color: var(--Container-Background);
+	pointer-events:   none;
+}
+
+.photography-navigation-button.left {
+	border-radius: calc(1rem / 3) 0 0 calc(1rem / 3);
+}
+
+.photography-navigation-button.right {
+	border-radius: 0 calc(1rem / 3) calc(1rem / 3) 0;
+}
+
+.photography-navigation-button.selected::before {
+	content: "[";
+}
+
+.photography-navigation-button.selected::after {
+	content: "]";
+}
+
 .photography-inner-container {
 	width:            100%;
 	display:          flex;

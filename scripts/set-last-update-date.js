@@ -27,5 +27,5 @@ const setLastUpdateDate = async () => {
 }
 
 (document.addEventListener("DOMContentLoaded", async () => {
-    await setLastUpdateDate();
+    // await setLastUpdateDate();
 }));

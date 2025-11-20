@@ -25,7 +25,6 @@
 	background:    linear-gradient(var(--Background-Light) 0%, var(--Background-Dark) 100%);
 	margin-right:  0.1rem;
 	border-radius: calc(1rem / 3) 0rem 0 calc(1rem / 3);
-
 }
 
 @media (orientation: portrait) {

@@ -15,9 +15,8 @@
 	<script src="./scripts/log-credits.js"></script>
 	<script src="./scripts/helper-scripts.js"></script>
 	<script src="./scripts/select-about-section.js"></script>
+	<script src="./scripts/select-photography-section.js"></script>
 	<script src="./scripts/set-last-update-date.js"></script>
-
-	<script></script>
 </head>
 <body>
 <div class="snow-container-fullscreen" id="snow-container-fullscreen"></div>
@@ -25,9 +24,11 @@
 <div class="main-container">
 	<img src="./assets/interface/backgrounds/header-banner.jpg"
 	     class="banner-photo"
-	     alt="An abstract, blue-colored decorative header banner image."/>
+	     alt="An abstract, blue-colored decorative header banner image."
+	     aria-label="An abstract, blue-colored decorative header banner image."/>
 	<img class="logotype" src="./assets/interface/self/logotype.png"
-	     alt="A logotype containing my mirrored last name, four colored dots and my first name."/>
+	     alt="A logotype containing my mirrored last name, four colored dots and my first name."
+	     aria-label="A logotype containing my mirrored last name, four colored dots and my first name."/>
 	<!-- Navigation START-->
 	<div class="navbar-outer-container">
 		<div class="navbar-inner-container" id="navigation">
@@ -43,7 +44,7 @@
 				<div class="navbar-button-gradient"></div>
 				<div class="navbar-button-text">Photography</div>
 			</button>
-			<a href="./assets/Anton Panfilenok Resume - 2025-10-16.pdf" download
+			<a href="./assets/Anton Panfilenok Resume - 2025-11-20.pdf" download
 			   style="flex:1; min-height:2rem; text-decoration: none">
 				<button class="navbar-button">
 					<div class="navbar-button-gradient"></div>
@@ -65,13 +66,15 @@
 	<!-- Navigation END-->
 
 	<img class="decoration-photo" src="./assets/interface/backgrounds/cityscape.jpg" style="margin-bottom: 0.25rem;"
-	     alt="A blue cityscape."/>
+	     alt="A blue cityscape."
+	     aria-label="A blue cityscape."/>
 
 	<!-- About START-->
-	<div class="section-header" id="about">about</div>
+	<div class="section-header">about</div>
 	<div class="about-container" style="margin-bottom: 0.25rem">
 		<div class="about-photo-container">
-			<img src="./assets/interface/self/headshot.jpeg" alt="A headshot of myself."/>
+			<img src="./assets/interface/self/headshot.jpeg" alt="A headshot of myself."
+			     aria-label="A headshot of myself."/>
 		</div>
 		<div class="about-content-container">
 			<div class="about-navigation">
@@ -92,7 +95,7 @@
 	<!-- About END-->
 
 	<!-- Projects START -->
-	<div class="section-header" id="projects">projects</div>
+	<div class="section-header">projects</div>
 	<div class="projects-container" style="margin-bottom: 0.25rem">
 		<!-- Project 1-->
 		<div class="project-container">
@@ -102,7 +105,8 @@
 			</div>
 			<div class="project-content-container">
 				<img src="assets/project-images/SpaceExplorerHub.jpg" class="project-image"
-				     alt="A screenshot of the Space Explorer Hub UI, showing a 3D globe containing green dots representing satellites, and red dots representing rocket launches. To the right is a news feed UI."/>
+				     alt="A screenshot of the Space Explorer Hub UI, showing a 3D globe containing green dots representing satellites, and red dots representing rocket launches. To the right is a news feed UI."
+				     aria-label="A screenshot of the Space Explorer Hub UI, showing a 3D globe containing green dots representing satellites, and red dots representing rocket launches. To the right is a news feed UI."/>
 				<div
 					style="display: flex; width: 100%; height: 100%; justify-content: space-between; flex-direction: column">
 					<div class="project-text">
@@ -147,9 +151,10 @@
 			</div>
 			<div class="project-content-container">
 				<img src="assets/project-images/Geofitti.jpg" class="project-image"
-				     alt="A screenshot of the Geofitti website, showing a map with a navigation user interface."/>
+				     alt="A screenshot of the Geofitti website, showing a map with a navigation user interface."
+				     aria-label="A screenshot of the Geofitti website, showing a map with a navigation user interface."/>
 				<div class="project-text">
-					Geofitti is a WIP GIS web app that allows users to pin content
+					Geofitti is a GIS web app that allows users to pin content
 					(user-drawn SVG art, text-based notes or reviews, etc.) onto an interactive map of Earth,
 					featuring 'like'-count leaderboards, limited-lifetime content pins, and crowdsourced moderation.
 					<br/>
@@ -180,7 +185,8 @@
 			</div>
 			<div class="project-content-container">
 				<img src="assets/project-images/TicketRebel.jpg" class="project-image"
-				     alt="A screenshot of the Ticketrebel website, showing a work-in-progress concert page."/>
+				     alt="A screenshot of the Ticketrebel website, showing a work-in-progress concert page."
+				     aria-label="A screenshot of the Ticketrebel website, showing a work-in-progress concert page."/>
 				<div class="project-text">
 					TicketRebel is a WIP concert ticketing web app focused on local, small-scale events, with
 					emphasis on concerts.
@@ -215,11 +221,12 @@
 			</div>
 			<div class="project-content-container">
 				<img src="assets/project-images/LastMinuteMassage.jpg" class="project-image"
-				     alt="A screenshot of the LastMinuteMassage page, showing a Google Maps interface overlayed with text boxes containing information about massage parlors and their services."/>
+				     alt="A screenshot of the LastMinuteMassage page, showing a Google Maps interface overlayed with text boxes containing information about massage parlors and their services."
+				     aria-label="A screenshot of the LastMinuteMassage page, showing a Google Maps interface overlayed with text boxes containing information about massage parlors and their services."/>
 				<div
 					style="display: flex; width: 100%; height: 100%; justify-content: space-between; flex-direction: column">
 					<div class="project-text">
-						Last Minute Massage was one my first big project - it was a website that displayed an
+						Last Minute Massage was my first big project - it was a website that displayed an
 						interactive
 						Google Maps API-based page populated with massage parlors and information on their available
 						time slots and services.
@@ -235,8 +242,8 @@
 						collection.
 					</div>
 					<div class="project-text">
-						<i>Please note that this screenshot is from an alpha build of the project due to the
-							service being shut down and there being no screenshots of the release version.</i>
+						<i>Please note that this screenshot is from an alpha build of the project, due to the
+							service being shut down.</i>
 					</div>
 				</div>
 			</div>
@@ -249,102 +256,184 @@
 		photography
 	</div>
 	<div class="photography-outer-container" style="margin-bottom: 0.25rem">
-		<div class="photography-inner-container">
+		<div class="photography-navigation">
+			<button class="photography-navigation-button left" id="photography-hobby-button"
+			        onclick="selectPhotographySection('photography-hobby-button')">
+				Hobby
+			</button>
+			<div class="photography-navigation-divider" id="photography-navigation-divider"></div>
+			<button class="photography-navigation-button right" id="photography-events-button"
+			        onclick="selectPhotographySection('photography-events-button')">
+				Events
+			</button>
+		</div>
+		<div class="photography-inner-container" id="photography-hobby-container">
 			<div class="photography-column">
-				<img src="assets/photography/vertical/aurora-1.jpeg"
-				     alt="A photograph of a lake and mountaings at night, cast with red, orange, yellow, green and blue from an aurora and a light leak."/>
-				<img src="assets/photography/horizontal/cat-1.jpeg"
-				     alt="A picture of a black and brown cat lying on a green carpet under sunlight."/>
+				<img src="assets/photography/hobby/vertical/aurora-1.jpeg"
+				     alt="A photograph of a lake and mountaings at night, cast with red, orange, yellow, green and blue from an aurora and a light leak."
+				     aria-label="A photograph of a lake and mountaings at night, cast with red, orange, yellow, green and blue from an aurora and a light leak."/>
+				<img src="assets/photography/hobby/horizontal/cat-1.jpeg"
+				     alt="A picture of a black and brown cat lying on a green carpet under sunlight."
+				     aria-label="A picture of a black and brown cat lying on a green carpet under sunlight."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/film-on-rainy-window.jpeg"
-				     alt="A double exposure of the view behind a rain-covered window and boxes of film rolls."/>
-				<img src="assets/photography/vertical/autumn-house.jpeg"
-				     alt="A red house surrounded by green shrubbery in autumn. In front of it stands a bare tree, with leaves on the ground."/>
+				<img src="assets/photography/hobby/horizontal/film-on-rainy-window.jpeg"
+				     alt="A double exposure of the view behind a rain-covered window and boxes of film rolls."
+				     aria-label="A double exposure of the view behind a rain-covered window and boxes of film rolls."/>
+				<img src="assets/photography/hobby/vertical/autumn-house.jpeg"
+				     alt="A red house surrounded by green shrubbery in autumn. In front of it stands a bare tree, with leaves on the ground."
+				     aria-label="A red house surrounded by green shrubbery in autumn. In front of it stands a bare tree, with leaves on the ground."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/balconies-1.jpeg"
-				     alt="A set of apartment balconies covered in strong sunlight."/>
-				<img src="assets/photography/horizontal/foggy-highway.jpeg"
-				     alt="A night-time long-exposure overlooking a foggy road and the highway behind it."/>
+				<img src="assets/photography/hobby/vertical/balconies-1.jpeg"
+				     alt="A set of apartment balconies covered in strong sunlight."
+				     aria-label="A set of apartment balconies covered in strong sunlight."/>
+				<img src="assets/photography/hobby/horizontal/foggy-highway.jpeg"
+				     alt="A night-time long-exposure overlooking a foggy road and the highway behind it."
+				     aria-label="A night-time long-exposure overlooking a foggy road and the highway behind it."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/foggy-streetlight.jpeg"
-				     alt="A single streetlight in an otherwise-dark street, with car and tree silhouettes barely visible."/>
-				<img src="assets/photography/vertical/balconies-3.jpeg"
-				     alt="An apartment building's balconies lit by evening light, framed behind powerlines and tree branches."/>
+				<img src="assets/photography/hobby/horizontal/foggy-streetlight.jpeg"
+				     alt="A single streetlight in an otherwise-dark street, with car and tree silhouettes barely visible."
+				     aria-label="A single streetlight in an otherwise-dark street, with car and tree silhouettes barely visible."/>
+				<img src="assets/photography/hobby/vertical/balconies-3.jpeg"
+				     alt="An apartment building's balconies lit by evening light, framed behind powerlines and tree branches."
+				     aria-label="An apartment building's balconies lit by evening light, framed behind powerlines and tree branches."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/banconies-2.jpeg"
-				     alt="A set of curved apartment balconies are are lit by sunset light, with faint clouds visible in an otherwise-empty blue sky in the background."/>
-				<img src="assets/photography/horizontal/horse.jpeg"
-				     alt="A close-up of a brown horse eating grass in a field."/>
+				<img src="assets/photography/hobby/vertical/banconies-2.jpeg"
+				     alt="A set of curved apartment balconies are are lit by sunset light, with faint clouds visible in an otherwise-empty blue sky in the background."
+				     aria-label="A set of curved apartment balconies are are lit by sunset light, with faint clouds visible in an otherwise-empty blue sky in the background."/>
+				<img src="assets/photography/hobby/horizontal/horse.jpeg"
+				     alt="A close-up of a brown horse eating grass in a field."
+				     aria-label="A close-up of a brown horse eating grass in a field."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/leaves-2.jpeg"
-				     alt="Red and green leaves, with a completely empty blue sky behind them."/>
-				<img src="assets/photography/vertical/cat-in-tree.jpeg"
-				     alt="An orange cat wearing a blue harness being lifted up into a tree."/>
+				<img src="assets/photography/hobby/horizontal/leaves-2.jpeg"
+				     alt="Red and green leaves, with a completely empty blue sky behind them."
+				     aria-label="Red and green leaves, with a completely empty blue sky behind them."/>
+				<img src="assets/photography/hobby/vertical/cat-in-tree.jpeg"
+				     alt="An orange cat wearing a blue harness being lifted up into a tree."
+				     aria-label="An orange cat wearing a blue harness being lifted up into a tree."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/diner.jpeg"
-				     alt="An night-time interior shot of a retro-styled diner."/>
-				<img src="assets/photography/horizontal/snowy-bridge-at-night.jpeg"
-				     alt="A night-time shot of an empty four-lane bridge in a snowstorm."/>
+				<img src="assets/photography/hobby/vertical/diner.jpeg"
+				     alt="An night-time interior shot of a retro-styled diner."
+				     aria-label="An night-time interior shot of a retro-styled diner."/>
+				<img src="assets/photography/hobby/horizontal/snowy-bridge-at-night.jpeg"
+				     alt="A night-time shot of an empty four-lane bridge in a snowstorm."
+				     aria-label="A night-time shot of an empty four-lane bridge in a snowstorm."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/snowy-field.jpeg"
-				     alt="A night-time shot of an empty, snow-covered soccer field."/>
-				<img src="assets/photography/vertical/granville.jpeg"
-				     alt="A photograph of Granville Street, in Vancouver, B.C., facing into the sun."/>
+				<img src="assets/photography/hobby/horizontal/snowy-field.jpeg"
+				     alt="A night-time shot of an empty, snow-covered soccer field."
+				     aria-label="A night-time shot of an empty, snow-covered soccer field."/>
+				<img src="assets/photography/hobby/vertical/granville.jpeg"
+				     alt="A photograph of Granville Street, in Vancouver, B.C., facing into the sun."
+				     aria-label="A photograph of Granville Street, in Vancouver, B.C., facing into the sun."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/leaves-1.jpeg"
-				     alt="A photo of an arch, with green leaves drooping down from the top."/>
-				<img src="assets/photography/horizontal/snowy-night-alley.jpeg"
-				     alt="A night-time shot of a snow-covered alley, with cars parked on the side of the road."/>
+				<img src="assets/photography/hobby/vertical/leaves-1.jpeg"
+				     alt="A photo of an arch, with green leaves drooping down from the top."
+				     aria-label="A photo of an arch, with green leaves drooping down from the top."/>
+				<img src="assets/photography/hobby/horizontal/snowy-night-alley.jpeg"
+				     alt="A night-time shot of a snow-covered alley, with cars parked on the side of the road."
+				     aria-label="A night-time shot of a snow-covered alley, with cars parked on the side of the road."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/snowy-overpass-1.jpeg"
-				     alt="A night-time shot of a snowy highway overpass."/>
-				<img src="assets/photography/vertical/neon-sign.jpeg"
-				     alt="A night-time shot of a red and green neon 'OPEN' sign lighting up the entrance to a restaurant."/>
+				<img src="assets/photography/hobby/horizontal/snowy-overpass-1.jpeg"
+				     alt="A night-time shot of a snowy highway overpass."
+				     aria-label="A night-time shot of a snowy highway overpass."/>
+				<img src="assets/photography/hobby/vertical/neon-sign.jpeg"
+				     alt="A night-time shot of a red and green neon 'OPEN' sign lighting up the entrance to a restaurant."
+				     aria-label="A night-time shot of a red and green neon 'OPEN' sign lighting up the entrance to a restaurant."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/palm-trees.jpeg"
-				     alt="A tall palm tree with a ladder attached to it."/>
-				<img src="assets/photography/horizontal/spiderweb-on-dead-plant.jpeg"
-				     alt="Spiderwebs hanging from the branches of a dying flower."/>
+				<img src="assets/photography/hobby/vertical/palm-trees.jpeg"
+				     alt="A tall palm tree with a ladder attached to it."
+				     aria-label="A tall palm tree with a ladder attached to it."/>
+				<img src="assets/photography/hobby/horizontal/spiderweb-on-dead-plant.jpeg"
+				     alt="Spiderwebs hanging from the branches of a dying flower."
+				     aria-label="Spiderwebs hanging from the branches of a dying flower."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/sunset-and-balconies.jpeg"
-				     alt="Silhouettes of apartment balconies, with a cloudy sunset behind them."/>
-				<img src="assets/photography/vertical/pool-and-balconies.jpeg"
-				     alt="An sunset shot of a pool, with balconies and a gazebo behind it. Clouds cover the sky in the background."/>
+				<img src="assets/photography/hobby/horizontal/sunset-and-balconies.jpeg"
+				     alt="Silhouettes of apartment balconies, with a cloudy sunset behind them."
+				     aria-label="Silhouettes of apartment balconies, with a cloudy sunset behind them."/>
+				<img src="assets/photography/hobby/vertical/pool-and-balconies.jpeg"
+				     alt="An sunset shot of a pool, with balconies and a gazebo behind it. Clouds cover the sky in the background."
+				     aria-label="An sunset shot of a pool, with balconies and a gazebo behind it. Clouds cover the sky in the background."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/vertical/regis-hotel.jpeg"
-				     alt="A night-time photo of the Regis Hotel and surrounding street in Vancouver, B.C.."/>
-				<img src="assets/photography/horizontal/tail-light-trails-horizontal.jpeg"
-				     alt="A night-time long-exposure of tail- and head-light trails on a highway."/>
+				<img src="assets/photography/hobby/vertical/regis-hotel.jpeg"
+				     alt="A night-time photo of the Regis Hotel and surrounding street in Vancouver, B.C.."
+				     aria-label="A night-time photo of the Regis Hotel and surrounding street in Vancouver, B.C.."/>
+				<img src="assets/photography/hobby/horizontal/tail-light-trails-horizontal.jpeg"
+				     alt="A night-time long-exposure of tail- and head-light trails on a highway."
+				     aria-label="A night-time long-exposure of tail- and head-light trails on a highway."/>
 			</div>
 			<div class="photography-column">
-				<img src="assets/photography/horizontal/trainyard.jpeg"
-				     alt="A night-time photo of an inactive train yard, lit up by red lights."/>
-				<img src="assets/photography/vertical/seagulls.jpeg"
-				     alt="A group of seagulls resting and flying around on mossy cliff face."/>
+				<img src="assets/photography/hobby/horizontal/trainyard.jpeg"
+				     alt="A night-time photo of an inactive train yard, lit up by red lights."
+				     aria-label="A night-time photo of an inactive train yard, lit up by red lights."/>
+				<img src="assets/photography/hobby/vertical/seagulls.jpeg"
+				     alt="A group of seagulls resting and flying around on mossy cliff face."
+				     aria-label="A group of seagulls resting and flying around on mossy cliff face."/>
 			</div>
 		</div>
+		<div class="photography-inner-container" id="photography-events-container">
+			<div class="photography-column">
+				<img src="assets/photography/events/vertical/1.JPG"
+				     alt="A Major League Hacking representative organizing merchandise at a booth at StormHacks 2025."
+				     aria-label="A Major League Hacking representative organizing merchandise at a booth at StormHacks 2025."/>
+				<img src="assets/photography/events/horizontal/1.jpg"
+				     alt="A group of StormHacks 2024 judges having a discussion."
+				     aria-label="A group of StormHacks 2024 judges having a discussion."/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photography/events/horizontal/2.JPG"
+				     alt="A MentorMates representative hosting a speech during StormHacks 2025."
+				     aria-label="A MentorMates representative hosting a speech during StormHacks 2025."/>
+				<img src="assets/photography/events/vertical/2.JPG"
+				     alt="A group of Costco representatives talking to a crowd of StormHacks 2025 attendees."
+				     aria-label="A group of Costco representatives talking to a crowd of StormHacks 2025 attendees."/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photography/events/vertical/3.JPG"
+				     alt="An MLH advertisement at a booth during StormHacks 2025."
+				     aria-label="An MLH advertisement at a booth during StormHacks 2025."/>
+				<img src="assets/photography/events/horizontal/3.JPG"
+				     alt="A camera on a gimbal taking photos of StormHacks 2025 attendees."
+				     aria-label="A camera on a gimbal taking photos of StormHacks 2025 attendees."/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photography/events/horizontal/4.JPG"
+				     alt="A group of League of Legends Tournament participants during StormHacks 2025."
+				     aria-label="A group of League of Legends Tournament participants during StormHacks 2025."/>
+				<img src="assets/photography/events/vertical/4.JPG"
+				     alt="An Ekohe represtnative talking to a student at a booth during StormHacks 2025."
+				     aria-label="An Ekohe represtnative talking to a student at a booth during StormHacks 2025."/>
+			</div>
+			<div class="photography-column">
+				<img src="assets/photography/events/vertical/5.JPG"
+				     alt="A group of content creators during a fireside chat at StormHacks 2025."
+				     aria-label="A group of content creators during a fireside chat at StormHacks 2025."/>
+				<img src="assets/photography/events/horizontal/5.jpg"
+				     alt="A group of StormHacks 2024 participants working on their project."
+				     aria-label="A group of StormHacks 2024 participants working on their project."/>
+			</div>
+		</div>
+		<!-- Photography END -->
 	</div>
-	<!-- Photography END -->
-
 	<!-- Footer START -->
 	<div class="footer">
 		<img src="./assets/interface/backgrounds/footer-banner.jpg" class="footer-image"
-		     alt="An abstract, blue-colored decorative footer banner image."/>
+		     alt="An abstract, blue-colored decorative footer banner image."
+		     aria-label="An abstract, blue-colored decorative footer banner image."/>
 		<div class="footer-content">
 			<!-- Setting (line-height: 1) fixes <sup> changing the line heihgt -->
-			<div id="copyrightText" style="line-height: 1" onclick="swapCopyrightText()">(c) anton p. 2024 - 2025</div>
+			<div id="copyrightText" style="line-height: 1" onclick="swapCopyrightText()">(c) anton p. 2024 - 2025
+			</div>
 			<div id="lastUpdateDate">loading...</div>
 			<div>
 				<a href="https://github.com/anton-pan">github</a> |
@@ -356,5 +445,6 @@
 	<!-- Footer END -->
 </div>
 <div class="side-text-right" id="side-text-right"></div>
+
 </body>
 </html>
