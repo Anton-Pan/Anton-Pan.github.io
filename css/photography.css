@@ -1,9 +1,9 @@
 .photography-outer-container {
 	width:         100%;
-	background:    linear-gradient(var(--Background-Light) 0%, var(--Background-Dark) 100%);
+	background:    linear-gradient(var(--Interface-Medium) 0%, var(--Interface-Dark) 100%);
 	padding:       0.5rem 0.5rem 0.5rem 0.5rem;
 	overflow-x:    hidden;
-	border-radius: calc(1rem / 3);
+	border-radius: var(--Default-Border);
 }
 
 .photography-navigation {
@@ -15,11 +15,11 @@
 }
 
 .photography-navigation-divider {
-	background: linear-gradient(90deg, rgb(56, 71, 103) 25%, rgb(142, 156, 179) 100%);
+	background: linear-gradient(90deg, var(--Interface-Medium) 25%, var(--Interface-Light) 100%);
 }
 
 .photography-navigation-divider.flipped {
-	background: linear-gradient(270deg, rgb(56, 71, 103) 25%, rgb(142, 156, 179) 100%);
+	background: linear-gradient(270deg, var(--Interface-Medium) 25%, var(--Interface-Light) 100%);
 }
 
 .photography-navigation-button {
@@ -28,16 +28,16 @@
 }
 
 .photography-navigation-button.selected {
-	background-color: var(--Container-Background);
+	background-color: var(--Interface-Light);
 	pointer-events:   none;
 }
 
 .photography-navigation-button.left {
-	border-radius: calc(1rem / 3) 0 0 calc(1rem / 3);
+	border-radius: var(--Default-Border) 0 0 var(--Default-Border);
 }
 
 .photography-navigation-button.right {
-	border-radius: 0 calc(1rem / 3) calc(1rem / 3) 0;
+	border-radius: 0 var(--Default-Border) var(--Default-Border) 0;
 }
 
 .photography-navigation-button.selected::before {
@@ -52,7 +52,7 @@
 	width:            100%;
 	display:          flex;
 	flex-direction:   row;
-	scrollbar-color:  var(--Container-Background) var(--Background-Light);
+	scrollbar-color: var(--Interface-Light) var(--Interface-Medium);
 	overflow-x:       scroll;
 	scroll-snap-type: x mandatory;
 	gap:              0.5rem;

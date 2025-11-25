@@ -1,0 +1,44 @@
+.side-text {
+	filter:          blur(2px);
+	width:           25%;
+	height:          100vh;
+	position:        fixed;
+	top:             0;
+	font-size:       1.5vh;
+	font-family:     serif;
+	font-style:      italic;
+	z-index:         -1;
+	white-space:     pre;
+	pointer-events:  none;
+	color:           transparent;
+	background-clip: text;
+}
+
+.side-text.left {
+	background:      -webkit-linear-gradient(
+			                 var(--Interface-Medium),
+			                 var(--Interface-Light),
+			                 var(--Interface-Light),
+			                 var(--Interface-Light),
+			                 var(--Interface-Dark));
+	left:            0;
+	padding-left:    0.5vw;
+	/* Required Duplicate */
+	background-clip: text;
+}
+
+.side-text.right {
+	/* right-only */
+	background:      -webkit-linear-gradient(
+			                 var(--Interface-Dark),
+			                 var(--Interface-Light),
+			                 var(--Interface-Light),
+			                 var(--Interface-Light),
+			                 var(--Interface-Medium)
+	                 );
+	right:           0;
+	padding-right:   0.5vw;
+	rotate:          180deg;
+	/* Required Duplicate */
+	background-clip: text;
+}

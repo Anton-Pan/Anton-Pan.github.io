@@ -22,7 +22,7 @@
 .about-photo-container {
 	aspect-ratio:  1/1;
 	padding:       2rem;
-	background:    linear-gradient(var(--Background-Light) 0%, var(--Background-Dark) 100%);
+	background: linear-gradient(var(--Interface-Medium) 0%, var(--Interface-Dark) 100%);
 	margin-right:  0.1rem;
 	border-radius: calc(1rem / 3) 0rem 0 calc(1rem / 3);
 }
@@ -48,7 +48,7 @@
 	flex-direction: column;
 	height:         100%;
 	width:          100%;
-	background:     linear-gradient(var(--Background-Light) 0%, var(--Background-Dark) 100%);
+	background: linear-gradient(var(--Interface-Medium) 0%, var(--Interface-Dark) 100%);
 	border-radius: 0rem calc(1rem / 3) calc(1rem / 3) 0rem;
 }
 
@@ -70,7 +70,7 @@
 	width:         100%;
 	height:        10%;
 	border-radius: 0rem;
-	border-bottom: 0.15rem solid var(--Container-Background);
+	border-bottom: 0.15rem solid var(--Interface-Light);
 	display:       flex;
 }
 
@@ -79,7 +79,7 @@
 		border-left:   none;
 		border-top:    none;
 		border-right:  none;
-		border-bottom: 0.15rem solid var(--Container-Background);
+		border-bottom: 0.15rem solid var(--Interface-Light);
 		border-radius: 0rem;
 
 	}
@@ -98,7 +98,7 @@
 
 .about-navigation-button-selected {
 	flex:             1;
-	background-color: var(--Container-Background);
+	background-color: var(--Interface-Light);
 	pointer-events:   none;
 }
 
