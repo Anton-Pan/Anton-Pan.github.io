@@ -4,14 +4,14 @@
 }
 
 .testimonies-content-container {
-	width:                 100%;
 	display:               grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap:                   0.5rem;
-	padding:               0.5rem 0.5rem 0 0.5rem;
-	background-color:      var(--Custom-Dark-Blue);
 	align-items:           stretch;
+	width:                 100%;
+	padding:               0.5rem 0.5rem 0 0.5rem;
 	border-radius:         var(--Default-Border) var(--Default-Border) 0 0;
+	background:            linear-gradient(var(--Interface-Medium) 0%, var(--Interface-Dark) 100%);
+	grid-template-columns: repeat(3, 1fr);
+	gap:                   0.5rem;
 }
 
 @media (orientation: portrait) {
@@ -25,17 +25,9 @@
 @media (orientation: landscape) {
 	.testimonies-content-container {
 		display:               grid;
-		grid-template-columns: repeat(2, 1fr);
 		align-items:           stretch;
+		grid-template-columns: repeat(3, 1fr);
 	}
-}
-
-.testimonies-footer-container {
-	width:            100%;
-	display:          flex;
-	background-color: var(--Custom-Dark-Blue);
-	padding-left:     1rem;
-	border-radius:    0 0 var(--Default-Border) var(--Default-Border);
 }
 
 .testimony-container {
@@ -51,9 +43,16 @@
 
 .testimony-header-container {
 	display:         flex;
+	flex-direction: column;
 	justify-content: space-between;
 	width:           100%;
 	padding:         0.25rem 0rem 0.25rem 0rem;
+}
+
+.testimony-header-text-container {
+	display:         flex;
+	flex-direction:  row;
+	justify-content: space-between;
 }
 
 .testimony-header-text {
@@ -70,4 +69,12 @@
 	flex-direction: column;
 	background:     linear-gradient(var(--Interface-Medium) 0%, var(--Interface-Dark) 100%);
 	border-radius:  var(--Default-Border);
+}
+
+.testimonies-footer-container {
+	display:          flex;
+	width:            100%;
+	padding-left:     1rem;
+	border-radius:    0 0 var(--Default-Border) var(--Default-Border);
+	background-color: var(--Interface-Dark);
 }

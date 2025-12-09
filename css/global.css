@@ -118,6 +118,22 @@ button {
 	width:           100%;
 }
 
+/*
+// Soon (TM)
+a.header-link{
+	font-family:    "160MKSDAL", sans-serif;
+	color:          ghostwhite;
+	text-transform: uppercase;
+}
+
+a::after {
+	font-size: 0.5rem;
+	vertical-align: super;
+	content: "🔗";
+	text-decoration: none;
+}
+*/
+
 .feature-toggle-button {
 	min-height:       2rem;
 	background-color: transparent;

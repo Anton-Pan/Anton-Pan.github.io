@@ -1,0 +1,2 @@
+- Implement link icons for all <a> elements
+- Fix About Me/Site sections jumping on second load

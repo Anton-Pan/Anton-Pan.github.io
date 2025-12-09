@@ -1,16 +1,19 @@
 Hi - I'm Anton - the developer of this site (and many others)!
 <br/>
-I'm a third-year computing science student at Simon Fraser University in Vancouver, B.C., and I've been working as a Full-Stack React developer since 2021.
-<br/>
-<br/>
+<p>
+I'm a third-year computing science student at Simon Fraser University in Vancouver, B.C., and I've been working as a web developer since 2021.
+<p/>
+<p>
 In addition to studying at SFU, I do event photography and external relations for <a href="https://sfusurge.com/">SFU Surge</a>, where I participated in making
-our flagship event, <a href="https://www.stormhacks.com/">StormHacks</a>becoming Western Canada's biggest hackathon, with over 1000 applicants and over 750 participants.
+our flagship event, <a href="https://www.stormhacks.com/">StormHacks</a> becoming Western Canada's biggest hackathon, with over 1000 applicants and over 750 participants.
+<p/>
+<p>
+I'm currently working at a local startup as a full-stack (React + MUI + Koa) developer on a marketplace-based anti-scalping event ticketing service, and a GIS web app for free-form user-generated-content placement over a map of Earth.
 <br/>
-<br/>
-I'm currently working for a local startup, where I'm working on an anti-scalping event-ticketing service and a GIS web app for free-form user-generated-content placement over a map of Earth.
-<br/>
-<br/>
+<p/>
+<p>
 Outisde of school and work, I spend my free time tinkering with old tech, working on cars and
 <a href="https://www.youtube.com/watch?v=IHEZEoCKvgE" title="Sunlounger ft. Zara - Lost (Will Atkinson Remix)">listening</a>
 <a href="https://www.youtube.com/watch?v=zdLhJ9lB5x0" title="Virtual Self - Key">to</a>
 <a href="https://www.youtube.com/watch?v=jaE4Mpjmkh4" title="Fall Out Boy - Nobody Puts Baby In The Corner">music</a>.
+<p/>

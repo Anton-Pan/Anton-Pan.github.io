@@ -1,7 +1,7 @@
 The aesthetic is heavily inspired by the <a href="https://www.webdesignmuseum.org/golden-age-of-web-design">Golden Age Of Web Design</a>, and by the aesthetics of the
 <a href="https://www.youtube.com/watch?v=b06pKMxF6h8">Vir</a><a href="https://www.youtube.com/watch?v=HPc8QMycGno">tua</a><a href="https://www.youtube.com/watch?v=e7QeR0VxnlA">l S</a><a href="https://www.youtube.com/watch?v=zdLhJ9lB5x0">elf</a> project.
 <br/>
-<br/>
+<p>
 I've hand-written <b>all</b> the code for this site.
 <br/>
 No libraries or frameworks. Just pure HTML, CSS and JavaScript.
@@ -16,3 +16,4 @@ The second is <b>limit-testing</b>: I want to see just how far I can push my ski
 <br/>
 For example; the falling snow is just multiple CSS animations that transition between two random points at the top and bottom of the screen,
 which are randomly regenerated with every individual animation completion.
+<p/>
